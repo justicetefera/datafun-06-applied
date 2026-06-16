@@ -21,8 +21,9 @@ dependencies = [
     "ipython",   # notebooks
     "pandas",    # tabular data manipulation
     # "scikit-learn",
-    "seaborn",   # statistical data visualization built on matplotlib
-    "matplotlib" # plotting library for static, animated, and interactive visualizations in Python
+    "seaborn",   # statistical data visualization built on matplotlib # plotting library for static, animated, and interactive visualizations in Python
+    "matplotlib",
+    "pre-commit>=4.6.0",
 ]
 
 
