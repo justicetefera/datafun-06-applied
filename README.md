@@ -1,6 +1,6 @@
 # datafun-06-applied
 
-[![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
+[![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://justicetefera.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
@@ -38,11 +38,8 @@ You'll work with these areas:
 - **pyproject.toml** - update authorship & links
 - **zensical.toml** - update authorship & links
 
-## Instructions
 
-Follow the
-[step-by-step workflow guide](https://justicetefera.github.io/datafun-06-applied/)
-to complete:
+## Instructions
 
 1. Phase 1. **Start & Run**
 2. Phase 2. **Change Authorship**
@@ -50,18 +47,13 @@ to complete:
 4. Phase 4. **Modify**
 5. Phase 5. **Apply**
 
+
 ## Challenges
 
-Challenges are expected.
-Sometimes instructions may not quite match your operating system.
-When issues occur, share screenshots, error messages, and details about what you tried.
-Working through issues is part of implementing professional projects.
+
 
 ## Success
 
-After completing Phase 1. **Start & Run**, you'll have your own GitHub project,
-with the example notebook executed and committed,
-and running the example script will print out:
 
 ```shell
 ========================
@@ -93,7 +85,7 @@ code .
 
 These are listed for convenience.
 For best results, follow the detailed instructions in
-[pro-analytics-02 guide](https://github.com/justicetefera/datafun-06-applied/).
+[datafun-06-applied](https://github.com/justicetefera/datafun-06-applied/).
 
 ```shell
 uv self update
