@@ -61,3 +61,6 @@ features = [
 # Navigation
 # ------------------------------------------------------------
 # Use folder-based navigation rather than explicit navigation.
+
+[nav]
+"Workflow A Guide" = "https://denisecase.github.io/pro-analytics-02/workflow-a-set-up-machine/"
