@@ -38,10 +38,10 @@ You'll work with these areas:
 - **pyproject.toml** - update authorship & links
 - **zensical.toml** - update authorship & links
 
-## Instructions (pro-analytics-02)
+## Instructions
 
 Follow the
-[step-by-step workflow guide](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
+[step-by-step workflow guide](https://justicetefera.github.io/datafun-06-applied/)
 to complete:
 
 1. Phase 1. **Start & Run**
@@ -83,7 +83,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/datafun-06-applied
+git clone https://github.com/justicetefera/datafun-06-applied
 
 cd datafun-06-applied
 code .
@@ -93,7 +93,7 @@ code .
 
 These are listed for convenience.
 For best results, follow the detailed instructions in
-[pro-analytics-02 guide](https://denisecase.github.io/pro-analytics-02/).
+[pro-analytics-02 guide](https://github.com/justicetefera/datafun-06-applied/).
 
 ```shell
 uv self update
