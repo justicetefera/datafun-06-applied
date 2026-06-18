@@ -4410,3 +4410,1021 @@ Name: count, dtype: int64
 2026-06-18 13:49:08 | INFO | JT-NB | ==============================
 2026-06-18 13:49:08 | INFO | JT-NB | === Executed successfully! ===
 2026-06-18 13:49:08 | INFO | JT-NB | ==============================
+2026-06-18 14:33:44 | INFO | JT-NB | === RUN START ===
+2026-06-18 14:33:44 | INFO | JT-NB | project=JT-NB
+2026-06-18 14:33:44 | INFO | JT-NB | repo_dir=datafun-06-applied
+2026-06-18 14:33:44 | INFO | JT-NB | python=3.14.5
+2026-06-18 14:33:44 | INFO | JT-NB | os=Windows 11
+2026-06-18 14:33:44 | INFO | JT-NB | shell=powershell
+2026-06-18 14:33:44 | INFO | JT-NB | cwd=.
+2026-06-18 14:33:44 | INFO | JT-NB | github_actions=False
+2026-06-18 14:33:44 | INFO | JT-NB | Imports and configuration complete.
+2026-06-18 14:34:01 | INFO | JT-NB | Previewing first few rows of the dataset
+2026-06-18 14:34:07 | INFO | JT-NB | Column names
+2026-06-18 14:34:12 | INFO | JT-NB | Building starter data dictionary
+2026-06-18 14:34:12 | DEBUG | JT-NB | 
+                         column    dtype  missing_count  missing_pct
+0                 Report Number    int64              0         0.00
+1                 Occurred Date      str              2         0.00
+2                 Occurred Time  float64              2         0.00
+3                 Reported Date      str              0         0.00
+4                 Reported Time  float64              2         0.00
+5             Crime Subcategory      str            262         0.05
+6   Primary Offense Description      str              0         0.00
+7                      Precinct      str              6         0.00
+8                        Sector      str           3009         0.63
+9                          Beat      str           2962         0.62
+10                 Neighborhood      str              0         0.00
+2026-06-18 14:34:21 | INFO | JT-NB | Creating engineered time and date features...
+2026-06-18 14:36:43 | INFO | JT-NB | Feature engineering complete.
+2026-06-18 14:36:51 | INFO | JT-NB | Missing values per column:
+2026-06-18 14:36:52 | INFO | JT-NB | Report Number                     0
+Occurred Date                     2
+Occurred Time                     2
+Reported Date                     0
+Reported Time                     2
+Crime Subcategory               262
+Primary Offense Description       0
+Precinct                          6
+Sector                         3009
+Beat                           2962
+Neighborhood                      0
+Occurred Time Parsed              2
+Reported Time Parsed              2
+Occurred Hour                     2
+Reported Hour                     2
+Occurred Month                    2
+Occurred Year                     2
+Report Delay (Hours)              2
+dtype: int64
+2026-06-18 14:36:52 | INFO | JT-NB | Checking missing values per column (sorted)
+2026-06-18 14:36:52 | DEBUG | JT-NB | 
+Sector                         3009
+Beat                           2962
+Crime Subcategory               262
+Precinct                          6
+Occurred Year                     2
+Occurred Date                     2
+Occurred Time                     2
+Reported Time                     2
+Reported Time Parsed              2
+Occurred Time Parsed              2
+Report Delay (Hours)              2
+Occurred Month                    2
+Occurred Hour                     2
+Reported Hour                     2
+Report Number                     0
+Reported Date                     0
+Primary Offense Description       0
+Neighborhood                      0
+dtype: int64
+2026-06-18 14:36:53 | INFO | JT-NB | Duplicate rows detected: 0
+2026-06-18 14:36:53 | INFO | JT-NB | Describing numeric columns: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)']
+2026-06-18 14:36:53 | DEBUG | JT-NB | 
+       Occurred Hour  Reported Hour  Occurred Month  Occurred Year  Report Delay (Hours)
+count  481374.000000  481374.000000   481374.000000  481374.000000         481374.000000
+mean       13.432479      13.255423        6.424142    2012.919426            185.078912
+std         6.877183       5.907095        3.432134       3.089900           3400.707611
+min         0.000000       0.000000        1.000000    1908.000000              0.000000
+25%         9.000000       9.000000        3.000000    2010.000000              0.000000
+50%        15.000000      14.000000        6.000000    2013.000000              0.000000
+75%        19.000000      18.000000        9.000000    2016.000000             24.000000
+max        23.000000      23.000000       12.000000    2018.000000         876600.000000
+
+2026-06-18 14:45:19 | INFO | JT-NB | Missing values per column:
+2026-06-18 14:45:19 | INFO | JT-NB | Report Number                     0
+Occurred Date                     2
+Occurred Time                     2
+Reported Date                     0
+Reported Time                     2
+Crime Subcategory               262
+Primary Offense Description       0
+Precinct                          6
+Sector                         3009
+Beat                           2962
+Neighborhood                      0
+Occurred Time Parsed              2
+Reported Time Parsed              2
+Occurred Hour                     2
+Reported Hour                     2
+Occurred Month                    2
+Occurred Year                     2
+Report Delay (Hours)              2
+dtype: int64
+2026-06-18 14:45:19 | INFO | JT-NB | Checking missing values per column (sorted)
+2026-06-18 14:45:19 | DEBUG | JT-NB | 
+Sector                         3009
+Beat                           2962
+Crime Subcategory               262
+Precinct                          6
+Occurred Year                     2
+Occurred Date                     2
+Occurred Time                     2
+Reported Time                     2
+Reported Time Parsed              2
+Occurred Time Parsed              2
+Report Delay (Hours)              2
+Occurred Month                    2
+Occurred Hour                     2
+Reported Hour                     2
+Report Number                     0
+Reported Date                     0
+Primary Offense Description       0
+Neighborhood                      0
+dtype: int64
+2026-06-18 14:45:20 | INFO | JT-NB | Duplicate rows detected: 0
+2026-06-18 14:45:20 | INFO | JT-NB | Describing numeric columns: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)']
+2026-06-18 14:45:20 | DEBUG | JT-NB | 
+       Occurred Hour  Reported Hour  Occurred Month  Occurred Year  Report Delay (Hours)
+count  481374.000000  481374.000000   481374.000000  481374.000000         481374.000000
+mean       13.432479      13.255423        6.424142    2012.919426            185.078912
+std         6.877183       5.907095        3.432134       3.089900           3400.707611
+min         0.000000       0.000000        1.000000    1908.000000              0.000000
+25%         9.000000       9.000000        3.000000    2010.000000              0.000000
+50%        15.000000      14.000000        6.000000    2013.000000              0.000000
+75%        19.000000      18.000000        9.000000    2016.000000             24.000000
+max        23.000000      23.000000       12.000000    2018.000000         876600.000000
+
+2026-06-18 14:45:26 | DEBUG | JT-NB | Columns required to be non-missing: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 14:45:26 | INFO | JT-NB | Columns found in df: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 14:45:26 | INFO | JT-NB | Original rows: 481376
+2026-06-18 14:45:26 | INFO | JT-NB | Clean rows:    481112
+2026-06-18 14:45:26 | INFO | JT-NB | Rows dropped:  264
+2026-06-18 14:45:30 | DEBUG | JT-NB | Columns required to be non-missing: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 14:45:30 | INFO | JT-NB | Columns found in df: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 14:45:31 | INFO | JT-NB | Original rows: 481376
+2026-06-18 14:45:31 | INFO | JT-NB | Clean rows:    481112
+2026-06-18 14:45:31 | INFO | JT-NB | Rows dropped:  264
+2026-06-18 14:45:36 | INFO | JT-NB | --------------- Manual statistics ---------------
+2026-06-18 14:45:36 | DEBUG | JT-NB | Occurred Hour Statistics (using numpy):
+2026-06-18 14:45:36 | DEBUG | JT-NB |   Mean: 13.43
+2026-06-18 14:45:36 | DEBUG | JT-NB |   Std Dev: 6.88
+2026-06-18 14:45:36 | DEBUG | JT-NB |   Min: 0.00
+2026-06-18 14:45:36 | DEBUG | JT-NB |   Max: 23.00
+2026-06-18 14:45:36 | DEBUG | JT-NB |   Range: 23.00
+2026-06-18 14:45:41 | INFO | JT-NB | Computing overall descriptive statistics
+2026-06-18 14:45:42 | DEBUG | JT-NB | 
+                         count         mean          std     min     25%     50%     75%       max
+Occurred Hour         481112.0    13.432829     6.876838     0.0     9.0    15.0    19.0      23.0
+Reported Hour         481112.0    13.255651     5.906971     0.0     9.0    14.0    18.0      23.0
+Occurred Month        481112.0     6.424313     3.432265     1.0     3.0     6.0     9.0      12.0
+Occurred Year         481112.0  2012.921869     3.088919  1908.0  2010.0  2013.0  2016.0    2018.0
+Report Delay (Hours)  481112.0   185.142786  3401.623826     0.0     0.0     0.0    24.0  876600.0
+2026-06-18 14:45:42 | INFO | JT-NB | --------------- Using pandas groupby() and agg() ---------------
+2026-06-18 14:45:42 | INFO | JT-NB | Computing descriptive statistics by group
+2026-06-18 14:45:42 | DEBUG | JT-NB | 
+                                    Occurred Hour                                 Reported Hour                       \
+                                            count       mean       std  min   max         count       mean       std   
+Crime Subcategory                                                                                                      
+AGGRAVATED ASSAULT                          13954  12.526086  7.752898  0.0  23.0         13954  12.613874  7.524487   
+AGGRAVATED ASSAULT-DV                        6307  12.861582  7.604105  0.0  23.0          6307  12.889646  7.322497   
+ARSON                                        1009  10.644202  8.165772  0.0  23.0          1009  10.478692  7.559932   
+BURGLARY-COMMERCIAL                         21274  11.878725  7.345658  0.0  23.0         21274  10.777616  5.271641   
+BURGLARY-COMMERCIAL-SECURE PARKING           1042  13.476008  6.969530  0.0  23.0          1042  12.385797  5.266656   
+BURGLARY-RESIDENTIAL                        43908  12.266147  6.117017  0.0  23.0         43908  14.253485  5.555938   
+BURGLARY-RESIDENTIAL-SECURE PARKING          7667  13.286161  7.326497  0.0  23.0          7667  13.050867  4.848664   
+CAR PROWL                                  137766  14.234891  7.116985  0.0  23.0        137766  13.167625  5.634110   
+DISORDERLY CONDUCT                            245  14.265306  7.215578  0.0  23.0           245  14.036735  7.395354   
+DUI                                         11849   9.681239  9.381241  0.0  23.0         11849   9.400962  9.138489   
+FAMILY OFFENSE-NONVIOLENT                    6372  13.042216  6.087491  0.0  23.0          6372  13.817326  5.510928   
+GAMBLE                                         17  15.470588  5.874922  0.0  22.0            17  15.764706  7.040325   
+HOMICIDE                                      250  11.064000  8.440431  0.0  23.0           250  10.964000  8.072631   
+LIQUOR LAW VIOLATION                         1588  14.246851  7.706462  0.0  23.0          1588  13.988665  7.843772   
+LOITERING                                      82  14.378049  5.435685  0.0  22.0            82  14.487805  5.256962   
+MOTOR VEHICLE THEFT                         40362  14.371414  7.128281  0.0  23.0         40362  12.130221  5.546083   
+NARCOTIC                                    16428  14.296202  6.564656  0.0  23.0         16428  14.119795  6.788755   
+PORNOGRAPHY                                   154  11.766234  6.198031  0.0  23.0           154  13.181818  5.051958   
+PROSTITUTION                                 3503  17.009420  6.897816  0.0  23.0          3503  15.851841  7.682932   
+RAPE                                         1757  10.564030  8.312177  0.0  23.0          1757  12.784291  6.690065   
+ROBBERY-COMMERCIAL                           4103  14.264441  5.721347  0.0  23.0          4103  14.363636  5.847640   
+ROBBERY-RESIDENTIAL                           988  12.481781  7.487827  0.0  23.0           988  12.352227  7.252811   
+ROBBERY-STREET                              11096  12.789384  7.907354  0.0  23.0         11096  12.825703  7.581154   
+SEX OFFENSE-OTHER                            5783  11.918381  7.235829  0.0  23.0          5783  13.357946  5.913171   
+THEFT-ALL OTHER                             49624  12.784036  6.417594  0.0  23.0         49624  13.755602  5.147722   
+THEFT-BICYCLE                               10206  13.797276  6.345727  0.0  23.0         10206  14.211346  4.919191   
+THEFT-BUILDING                              19718  13.032356  6.389003  0.0  23.0         19718  13.945278  5.096154   
+THEFT-SHOPLIFT                              44767  14.533049  4.384313  0.0  23.0         44767  14.787969  4.466527   
+TRESPASS                                    14733  12.337677  6.431457  0.0  23.0         14733  12.463178  6.388145   
+WEAPON                                       4560  12.828947  7.500597  0.0  23.0          4560  12.632675  7.512828   
+
+                                               Occurred Month                                Occurred Year  \
+                                     min   max          count      mean       std  min   max         count   
+Crime Subcategory                                                                                            
+AGGRAVATED ASSAULT                   0.0  23.0          13954  6.492834  3.298519  1.0  12.0         13954   
+AGGRAVATED ASSAULT-DV                0.0  23.0           6307  6.326463  3.400780  1.0  12.0          6307   
+ARSON                                0.0  23.0           1009  6.203171  3.196810  1.0  12.0          1009   
+BURGLARY-COMMERCIAL                  0.0  23.0          21274  6.494030  3.493638  1.0  12.0         21274   
+BURGLARY-COMMERCIAL-SECURE PARKING   0.0  23.0           1042  6.546065  3.318259  1.0  12.0          1042   
+BURGLARY-RESIDENTIAL                 0.0  23.0          43908  6.550196  3.464017  1.0  12.0         43908   
+BURGLARY-RESIDENTIAL-SECURE PARKING  0.0  23.0           7667  6.234642  3.495084  1.0  12.0          7667   
+CAR PROWL                            0.0  23.0         137766  6.434621  3.456114  1.0  12.0        137766   
+DISORDERLY CONDUCT                   0.0  23.0            245  5.857143  3.554033  1.0  12.0           245   
+DUI                                  0.0  23.0          11849  6.466537  3.562680  1.0  12.0         11849   
+FAMILY OFFENSE-NONVIOLENT            0.0  23.0           6372  6.229441  3.327623  1.0  12.0          6372   
+GAMBLE                               0.0  23.0             17  6.176471  3.539691  1.0  12.0            17   
+HOMICIDE                             0.0  23.0            250  6.356000  3.415836  1.0  12.0           250   
+LIQUOR LAW VIOLATION                 0.0  23.0           1588  6.253778  3.145969  1.0  12.0          1588   
+LOITERING                            0.0  22.0             82  6.439024  2.676360  1.0  12.0            82   
+MOTOR VEHICLE THEFT                  0.0  23.0          40362  6.457683  3.449854  1.0  12.0         40362   
+NARCOTIC                             0.0  23.0          16428  6.033662  3.407371  1.0  12.0         16428   
+PORNOGRAPHY                          0.0  23.0            154  5.655844  3.421157  1.0  12.0           154   
+PROSTITUTION                         0.0  23.0           3503  6.014559  3.062282  1.0  12.0          3503   
+RAPE                                 0.0  23.0           1757  6.332385  3.416586  1.0  12.0          1757   
+ROBBERY-COMMERCIAL                   0.0  23.0           4103  6.374117  3.553544  1.0  12.0          4103   
+ROBBERY-RESIDENTIAL                  0.0  23.0            988  6.348178  3.523007  1.0  12.0           988   
+ROBBERY-STREET                       0.0  23.0          11096  6.543439  3.380391  1.0  12.0         11096   
+SEX OFFENSE-OTHER                    0.0  23.0           5783  6.259900  3.389670  1.0  12.0          5783   
+THEFT-ALL OTHER                      0.0  23.0          49624  6.497159  3.412028  1.0  12.0         49624   
+THEFT-BICYCLE                        0.0  23.0          10206  6.795806  2.985026  1.0  12.0         10206   
+THEFT-BUILDING                       0.0  23.0          19718  6.428492  3.476558  1.0  12.0         19718   
+THEFT-SHOPLIFT                       0.0  23.0          44767  6.341323  3.437888  1.0  12.0         44767   
+TRESPASS                             0.0  23.0          14733  6.262404  3.440009  1.0  12.0         14733   
+WEAPON                               0.0  23.0           4560  6.262061  3.328074  1.0  12.0          4560   
+
+                                                                           Report Delay (Hours)               \
+                                            mean       std     min     max                count         mean   
+Crime Subcategory                                                                                              
+AGGRAVATED ASSAULT                   2013.271392  3.090355  2001.0  2018.0                13954    68.106063   
+AGGRAVATED ASSAULT-DV                2013.096718  2.965576  2004.0  2018.0                 6307   114.151261   
+ARSON                                2012.853320  3.262384  2007.0  2018.0                 1009    22.311199   
+BURGLARY-COMMERCIAL                  2012.958071  3.183143  2000.0  2018.0                21274   153.528250   
+BURGLARY-COMMERCIAL-SECURE PARKING   2014.165067  2.729849  2001.0  2018.0                 1042   159.892514   
+BURGLARY-RESIDENTIAL                 2012.572925  2.986206  1975.0  2018.0                43908   101.926756   
+BURGLARY-RESIDENTIAL-SECURE PARKING  2015.063649  2.128440  2001.0  2018.0                 7667   173.484283   
+CAR PROWL                            2012.878932  3.058419  1979.0  2018.0               137766    97.329733   
+DISORDERLY CONDUCT                   2012.408163  3.142245  2008.0  2018.0                  245    10.971429   
+DUI                                  2012.748840  3.180038  1908.0  2018.0                11849    86.652376   
+FAMILY OFFENSE-NONVIOLENT            2012.843691  3.292003  1964.0  2018.0                 6372  1417.468927   
+GAMBLE                               2011.235294  3.509441  2008.0  2018.0                   17     1.411765   
+HOMICIDE                             2012.388000  4.101799  1981.0  2018.0                  250   155.904000   
+LIQUOR LAW VIOLATION                 2011.088161  2.784607  2007.0  2018.0                 1588    11.848866   
+LOITERING                            2011.097561  3.441252  2008.0  2018.0                   82     2.634146   
+MOTOR VEHICLE THEFT                  2012.921287  2.969318  1988.0  2018.0                40362    74.407611   
+NARCOTIC                             2011.941502  3.128513  2006.0  2018.0                16428    24.113952   
+PORNOGRAPHY                          2012.701299  3.337507  2007.0  2018.0                  154   291.740260   
+PROSTITUTION                         2012.616043  2.989730  1996.0  2018.0                 3503   108.037682   
+RAPE                                 2013.096187  3.753870  1977.0  2018.0                 1757  3584.605578   
+ROBBERY-COMMERCIAL                   2013.526688  3.136611  2007.0  2018.0                 4103     4.229101   
+ROBBERY-RESIDENTIAL                  2012.605263  3.158760  2007.0  2018.0                  988    55.044534   
+ROBBERY-STREET                       2012.481975  2.996083  2000.0  2018.0                11096    52.258832   
+SEX OFFENSE-OTHER                    2012.639806  3.822070  1973.0  2018.0                 5783  3435.710185   
+THEFT-ALL OTHER                      2012.854204  3.036704  1993.0  2018.0                49624   298.743511   
+THEFT-BICYCLE                        2013.440427  2.740290  2006.0  2018.0                10206   151.642563   
+THEFT-BUILDING                       2012.883152  3.026223  1998.0  2018.0                19718   281.721878   
+THEFT-SHOPLIFT                       2012.986575  3.097584  2004.0  2018.0                44767    37.171667   
+TRESPASS                             2014.311138  3.104171  2001.0  2018.0                14733    20.779475   
+WEAPON                               2012.806140  3.189924  2007.0  2018.0                 4560    16.684211   
+
+                                                                  
+                                              std  min       max  
+Crime Subcategory                                                 
+AGGRAVATED ASSAULT                    1705.803046  0.0  115392.0  
+AGGRAVATED ASSAULT-DV                 1313.816446  0.0   49800.0  
+ARSON                                  185.355263  0.0    3624.0  
+BURGLARY-COMMERCIAL                   2101.177286  0.0  157800.0  
+BURGLARY-COMMERCIAL-SECURE PARKING    2728.631474  0.0   87720.0  
+BURGLARY-RESIDENTIAL                  1393.782764  0.0  140280.0  
+BURGLARY-RESIDENTIAL-SECURE PARKING   1618.185194  0.0   87696.0  
+CAR PROWL                             1388.766026  0.0  142200.0  
+DISORDERLY CONDUCT                     145.847169  0.0    2280.0  
+DUI                                   8063.492254  0.0  876600.0  
+FAMILY OFFENSE-NONVIOLENT            10982.370994  0.0  403224.0  
+GAMBLE                                   5.820855  0.0      24.0  
+HOMICIDE                              1923.387672  0.0   29424.0  
+LIQUOR LAW VIOLATION                   230.350386  0.0    8784.0  
+LOITERING                               11.317540  0.0      72.0  
+MOTOR VEHICLE THEFT                    800.052706  0.0   62256.0  
+NARCOTIC                               496.485692  0.0   35184.0  
+PORNOGRAPHY                           1053.001554  0.0    8712.0  
+PROSTITUTION                          2529.886773  0.0  129408.0  
+RAPE                                 19460.468176  0.0  362784.0  
+ROBBERY-COMMERCIAL                      87.976450  0.0    4800.0  
+ROBBERY-RESIDENTIAL                    736.821088  0.0   18168.0  
+ROBBERY-STREET                        1376.854485  0.0   78960.0  
+SEX OFFENSE-OTHER                    19170.715401  0.0  364752.0  
+THEFT-ALL OTHER                       2805.326544  0.0  190656.0  
+THEFT-BICYCLE                         1034.685750  0.0   56472.0  
+THEFT-BUILDING                        2457.545657  0.0  121560.0  
+THEFT-SHOPLIFT                         491.815351  0.0   61392.0  
+TRESPASS                               834.966378  0.0   87648.0  
+WEAPON                                 386.764391  0.0   18456.0  
+2026-06-18 14:46:07 | INFO | JT-NB | Computing overall descriptive statistics
+2026-06-18 14:46:07 | DEBUG | JT-NB | 
+                         count         mean          std     min     25%     50%     75%       max
+Occurred Hour         481112.0    13.432829     6.876838     0.0     9.0    15.0    19.0      23.0
+Reported Hour         481112.0    13.255651     5.906971     0.0     9.0    14.0    18.0      23.0
+Occurred Month        481112.0     6.424313     3.432265     1.0     3.0     6.0     9.0      12.0
+Occurred Year         481112.0  2012.921869     3.088919  1908.0  2010.0  2013.0  2016.0    2018.0
+Report Delay (Hours)  481112.0   185.142786  3401.623826     0.0     0.0     0.0    24.0  876600.0
+2026-06-18 14:46:07 | INFO | JT-NB | --------------- Using pandas groupby() and agg() ---------------
+2026-06-18 14:46:07 | INFO | JT-NB | Computing descriptive statistics by group
+2026-06-18 14:46:07 | DEBUG | JT-NB | 
+                                    Occurred Hour                                 Reported Hour                       \
+                                            count       mean       std  min   max         count       mean       std   
+Crime Subcategory                                                                                                      
+AGGRAVATED ASSAULT                          13954  12.526086  7.752898  0.0  23.0         13954  12.613874  7.524487   
+AGGRAVATED ASSAULT-DV                        6307  12.861582  7.604105  0.0  23.0          6307  12.889646  7.322497   
+ARSON                                        1009  10.644202  8.165772  0.0  23.0          1009  10.478692  7.559932   
+BURGLARY-COMMERCIAL                         21274  11.878725  7.345658  0.0  23.0         21274  10.777616  5.271641   
+BURGLARY-COMMERCIAL-SECURE PARKING           1042  13.476008  6.969530  0.0  23.0          1042  12.385797  5.266656   
+BURGLARY-RESIDENTIAL                        43908  12.266147  6.117017  0.0  23.0         43908  14.253485  5.555938   
+BURGLARY-RESIDENTIAL-SECURE PARKING          7667  13.286161  7.326497  0.0  23.0          7667  13.050867  4.848664   
+CAR PROWL                                  137766  14.234891  7.116985  0.0  23.0        137766  13.167625  5.634110   
+DISORDERLY CONDUCT                            245  14.265306  7.215578  0.0  23.0           245  14.036735  7.395354   
+DUI                                         11849   9.681239  9.381241  0.0  23.0         11849   9.400962  9.138489   
+FAMILY OFFENSE-NONVIOLENT                    6372  13.042216  6.087491  0.0  23.0          6372  13.817326  5.510928   
+GAMBLE                                         17  15.470588  5.874922  0.0  22.0            17  15.764706  7.040325   
+HOMICIDE                                      250  11.064000  8.440431  0.0  23.0           250  10.964000  8.072631   
+LIQUOR LAW VIOLATION                         1588  14.246851  7.706462  0.0  23.0          1588  13.988665  7.843772   
+LOITERING                                      82  14.378049  5.435685  0.0  22.0            82  14.487805  5.256962   
+MOTOR VEHICLE THEFT                         40362  14.371414  7.128281  0.0  23.0         40362  12.130221  5.546083   
+NARCOTIC                                    16428  14.296202  6.564656  0.0  23.0         16428  14.119795  6.788755   
+PORNOGRAPHY                                   154  11.766234  6.198031  0.0  23.0           154  13.181818  5.051958   
+PROSTITUTION                                 3503  17.009420  6.897816  0.0  23.0          3503  15.851841  7.682932   
+RAPE                                         1757  10.564030  8.312177  0.0  23.0          1757  12.784291  6.690065   
+ROBBERY-COMMERCIAL                           4103  14.264441  5.721347  0.0  23.0          4103  14.363636  5.847640   
+ROBBERY-RESIDENTIAL                           988  12.481781  7.487827  0.0  23.0           988  12.352227  7.252811   
+ROBBERY-STREET                              11096  12.789384  7.907354  0.0  23.0         11096  12.825703  7.581154   
+SEX OFFENSE-OTHER                            5783  11.918381  7.235829  0.0  23.0          5783  13.357946  5.913171   
+THEFT-ALL OTHER                             49624  12.784036  6.417594  0.0  23.0         49624  13.755602  5.147722   
+THEFT-BICYCLE                               10206  13.797276  6.345727  0.0  23.0         10206  14.211346  4.919191   
+THEFT-BUILDING                              19718  13.032356  6.389003  0.0  23.0         19718  13.945278  5.096154   
+THEFT-SHOPLIFT                              44767  14.533049  4.384313  0.0  23.0         44767  14.787969  4.466527   
+TRESPASS                                    14733  12.337677  6.431457  0.0  23.0         14733  12.463178  6.388145   
+WEAPON                                       4560  12.828947  7.500597  0.0  23.0          4560  12.632675  7.512828   
+
+                                               Occurred Month                                Occurred Year  \
+                                     min   max          count      mean       std  min   max         count   
+Crime Subcategory                                                                                            
+AGGRAVATED ASSAULT                   0.0  23.0          13954  6.492834  3.298519  1.0  12.0         13954   
+AGGRAVATED ASSAULT-DV                0.0  23.0           6307  6.326463  3.400780  1.0  12.0          6307   
+ARSON                                0.0  23.0           1009  6.203171  3.196810  1.0  12.0          1009   
+BURGLARY-COMMERCIAL                  0.0  23.0          21274  6.494030  3.493638  1.0  12.0         21274   
+BURGLARY-COMMERCIAL-SECURE PARKING   0.0  23.0           1042  6.546065  3.318259  1.0  12.0          1042   
+BURGLARY-RESIDENTIAL                 0.0  23.0          43908  6.550196  3.464017  1.0  12.0         43908   
+BURGLARY-RESIDENTIAL-SECURE PARKING  0.0  23.0           7667  6.234642  3.495084  1.0  12.0          7667   
+CAR PROWL                            0.0  23.0         137766  6.434621  3.456114  1.0  12.0        137766   
+DISORDERLY CONDUCT                   0.0  23.0            245  5.857143  3.554033  1.0  12.0           245   
+DUI                                  0.0  23.0          11849  6.466537  3.562680  1.0  12.0         11849   
+FAMILY OFFENSE-NONVIOLENT            0.0  23.0           6372  6.229441  3.327623  1.0  12.0          6372   
+GAMBLE                               0.0  23.0             17  6.176471  3.539691  1.0  12.0            17   
+HOMICIDE                             0.0  23.0            250  6.356000  3.415836  1.0  12.0           250   
+LIQUOR LAW VIOLATION                 0.0  23.0           1588  6.253778  3.145969  1.0  12.0          1588   
+LOITERING                            0.0  22.0             82  6.439024  2.676360  1.0  12.0            82   
+MOTOR VEHICLE THEFT                  0.0  23.0          40362  6.457683  3.449854  1.0  12.0         40362   
+NARCOTIC                             0.0  23.0          16428  6.033662  3.407371  1.0  12.0         16428   
+PORNOGRAPHY                          0.0  23.0            154  5.655844  3.421157  1.0  12.0           154   
+PROSTITUTION                         0.0  23.0           3503  6.014559  3.062282  1.0  12.0          3503   
+RAPE                                 0.0  23.0           1757  6.332385  3.416586  1.0  12.0          1757   
+ROBBERY-COMMERCIAL                   0.0  23.0           4103  6.374117  3.553544  1.0  12.0          4103   
+ROBBERY-RESIDENTIAL                  0.0  23.0            988  6.348178  3.523007  1.0  12.0           988   
+ROBBERY-STREET                       0.0  23.0          11096  6.543439  3.380391  1.0  12.0         11096   
+SEX OFFENSE-OTHER                    0.0  23.0           5783  6.259900  3.389670  1.0  12.0          5783   
+THEFT-ALL OTHER                      0.0  23.0          49624  6.497159  3.412028  1.0  12.0         49624   
+THEFT-BICYCLE                        0.0  23.0          10206  6.795806  2.985026  1.0  12.0         10206   
+THEFT-BUILDING                       0.0  23.0          19718  6.428492  3.476558  1.0  12.0         19718   
+THEFT-SHOPLIFT                       0.0  23.0          44767  6.341323  3.437888  1.0  12.0         44767   
+TRESPASS                             0.0  23.0          14733  6.262404  3.440009  1.0  12.0         14733   
+WEAPON                               0.0  23.0           4560  6.262061  3.328074  1.0  12.0          4560   
+
+                                                                           Report Delay (Hours)               \
+                                            mean       std     min     max                count         mean   
+Crime Subcategory                                                                                              
+AGGRAVATED ASSAULT                   2013.271392  3.090355  2001.0  2018.0                13954    68.106063   
+AGGRAVATED ASSAULT-DV                2013.096718  2.965576  2004.0  2018.0                 6307   114.151261   
+ARSON                                2012.853320  3.262384  2007.0  2018.0                 1009    22.311199   
+BURGLARY-COMMERCIAL                  2012.958071  3.183143  2000.0  2018.0                21274   153.528250   
+BURGLARY-COMMERCIAL-SECURE PARKING   2014.165067  2.729849  2001.0  2018.0                 1042   159.892514   
+BURGLARY-RESIDENTIAL                 2012.572925  2.986206  1975.0  2018.0                43908   101.926756   
+BURGLARY-RESIDENTIAL-SECURE PARKING  2015.063649  2.128440  2001.0  2018.0                 7667   173.484283   
+CAR PROWL                            2012.878932  3.058419  1979.0  2018.0               137766    97.329733   
+DISORDERLY CONDUCT                   2012.408163  3.142245  2008.0  2018.0                  245    10.971429   
+DUI                                  2012.748840  3.180038  1908.0  2018.0                11849    86.652376   
+FAMILY OFFENSE-NONVIOLENT            2012.843691  3.292003  1964.0  2018.0                 6372  1417.468927   
+GAMBLE                               2011.235294  3.509441  2008.0  2018.0                   17     1.411765   
+HOMICIDE                             2012.388000  4.101799  1981.0  2018.0                  250   155.904000   
+LIQUOR LAW VIOLATION                 2011.088161  2.784607  2007.0  2018.0                 1588    11.848866   
+LOITERING                            2011.097561  3.441252  2008.0  2018.0                   82     2.634146   
+MOTOR VEHICLE THEFT                  2012.921287  2.969318  1988.0  2018.0                40362    74.407611   
+NARCOTIC                             2011.941502  3.128513  2006.0  2018.0                16428    24.113952   
+PORNOGRAPHY                          2012.701299  3.337507  2007.0  2018.0                  154   291.740260   
+PROSTITUTION                         2012.616043  2.989730  1996.0  2018.0                 3503   108.037682   
+RAPE                                 2013.096187  3.753870  1977.0  2018.0                 1757  3584.605578   
+ROBBERY-COMMERCIAL                   2013.526688  3.136611  2007.0  2018.0                 4103     4.229101   
+ROBBERY-RESIDENTIAL                  2012.605263  3.158760  2007.0  2018.0                  988    55.044534   
+ROBBERY-STREET                       2012.481975  2.996083  2000.0  2018.0                11096    52.258832   
+SEX OFFENSE-OTHER                    2012.639806  3.822070  1973.0  2018.0                 5783  3435.710185   
+THEFT-ALL OTHER                      2012.854204  3.036704  1993.0  2018.0                49624   298.743511   
+THEFT-BICYCLE                        2013.440427  2.740290  2006.0  2018.0                10206   151.642563   
+THEFT-BUILDING                       2012.883152  3.026223  1998.0  2018.0                19718   281.721878   
+THEFT-SHOPLIFT                       2012.986575  3.097584  2004.0  2018.0                44767    37.171667   
+TRESPASS                             2014.311138  3.104171  2001.0  2018.0                14733    20.779475   
+WEAPON                               2012.806140  3.189924  2007.0  2018.0                 4560    16.684211   
+
+                                                                  
+                                              std  min       max  
+Crime Subcategory                                                 
+AGGRAVATED ASSAULT                    1705.803046  0.0  115392.0  
+AGGRAVATED ASSAULT-DV                 1313.816446  0.0   49800.0  
+ARSON                                  185.355263  0.0    3624.0  
+BURGLARY-COMMERCIAL                   2101.177286  0.0  157800.0  
+BURGLARY-COMMERCIAL-SECURE PARKING    2728.631474  0.0   87720.0  
+BURGLARY-RESIDENTIAL                  1393.782764  0.0  140280.0  
+BURGLARY-RESIDENTIAL-SECURE PARKING   1618.185194  0.0   87696.0  
+CAR PROWL                             1388.766026  0.0  142200.0  
+DISORDERLY CONDUCT                     145.847169  0.0    2280.0  
+DUI                                   8063.492254  0.0  876600.0  
+FAMILY OFFENSE-NONVIOLENT            10982.370994  0.0  403224.0  
+GAMBLE                                   5.820855  0.0      24.0  
+HOMICIDE                              1923.387672  0.0   29424.0  
+LIQUOR LAW VIOLATION                   230.350386  0.0    8784.0  
+LOITERING                               11.317540  0.0      72.0  
+MOTOR VEHICLE THEFT                    800.052706  0.0   62256.0  
+NARCOTIC                               496.485692  0.0   35184.0  
+PORNOGRAPHY                           1053.001554  0.0    8712.0  
+PROSTITUTION                          2529.886773  0.0  129408.0  
+RAPE                                 19460.468176  0.0  362784.0  
+ROBBERY-COMMERCIAL                      87.976450  0.0    4800.0  
+ROBBERY-RESIDENTIAL                    736.821088  0.0   18168.0  
+ROBBERY-STREET                        1376.854485  0.0   78960.0  
+SEX OFFENSE-OTHER                    19170.715401  0.0  364752.0  
+THEFT-ALL OTHER                       2805.326544  0.0  190656.0  
+THEFT-BICYCLE                         1034.685750  0.0   56472.0  
+THEFT-BUILDING                        2457.545657  0.0  121560.0  
+THEFT-SHOPLIFT                         491.815351  0.0   61392.0  
+TRESPASS                               834.966378  0.0   87648.0  
+WEAPON                                 386.764391  0.0   18456.0  
+2026-06-18 14:47:07 | INFO | JT-NB | Computing overall descriptive statistics
+2026-06-18 14:47:07 | DEBUG | JT-NB | 
+                         count         mean          std     min     25%     50%     75%       max
+Occurred Hour         481112.0    13.432829     6.876838     0.0     9.0    15.0    19.0      23.0
+Reported Hour         481112.0    13.255651     5.906971     0.0     9.0    14.0    18.0      23.0
+Occurred Month        481112.0     6.424313     3.432265     1.0     3.0     6.0     9.0      12.0
+Occurred Year         481112.0  2012.921869     3.088919  1908.0  2010.0  2013.0  2016.0    2018.0
+Report Delay (Hours)  481112.0   185.142786  3401.623826     0.0     0.0     0.0    24.0  876600.0
+2026-06-18 14:47:07 | INFO | JT-NB | --------------- Using pandas groupby() and agg() ---------------
+2026-06-18 14:47:07 | INFO | JT-NB | Computing descriptive statistics by group
+2026-06-18 14:47:07 | DEBUG | JT-NB | 
+                                    Occurred Hour                                 Reported Hour                       \
+                                            count       mean       std  min   max         count       mean       std   
+Crime Subcategory                                                                                                      
+AGGRAVATED ASSAULT                          13954  12.526086  7.752898  0.0  23.0         13954  12.613874  7.524487   
+AGGRAVATED ASSAULT-DV                        6307  12.861582  7.604105  0.0  23.0          6307  12.889646  7.322497   
+ARSON                                        1009  10.644202  8.165772  0.0  23.0          1009  10.478692  7.559932   
+BURGLARY-COMMERCIAL                         21274  11.878725  7.345658  0.0  23.0         21274  10.777616  5.271641   
+BURGLARY-COMMERCIAL-SECURE PARKING           1042  13.476008  6.969530  0.0  23.0          1042  12.385797  5.266656   
+BURGLARY-RESIDENTIAL                        43908  12.266147  6.117017  0.0  23.0         43908  14.253485  5.555938   
+BURGLARY-RESIDENTIAL-SECURE PARKING          7667  13.286161  7.326497  0.0  23.0          7667  13.050867  4.848664   
+CAR PROWL                                  137766  14.234891  7.116985  0.0  23.0        137766  13.167625  5.634110   
+DISORDERLY CONDUCT                            245  14.265306  7.215578  0.0  23.0           245  14.036735  7.395354   
+DUI                                         11849   9.681239  9.381241  0.0  23.0         11849   9.400962  9.138489   
+FAMILY OFFENSE-NONVIOLENT                    6372  13.042216  6.087491  0.0  23.0          6372  13.817326  5.510928   
+GAMBLE                                         17  15.470588  5.874922  0.0  22.0            17  15.764706  7.040325   
+HOMICIDE                                      250  11.064000  8.440431  0.0  23.0           250  10.964000  8.072631   
+LIQUOR LAW VIOLATION                         1588  14.246851  7.706462  0.0  23.0          1588  13.988665  7.843772   
+LOITERING                                      82  14.378049  5.435685  0.0  22.0            82  14.487805  5.256962   
+MOTOR VEHICLE THEFT                         40362  14.371414  7.128281  0.0  23.0         40362  12.130221  5.546083   
+NARCOTIC                                    16428  14.296202  6.564656  0.0  23.0         16428  14.119795  6.788755   
+PORNOGRAPHY                                   154  11.766234  6.198031  0.0  23.0           154  13.181818  5.051958   
+PROSTITUTION                                 3503  17.009420  6.897816  0.0  23.0          3503  15.851841  7.682932   
+RAPE                                         1757  10.564030  8.312177  0.0  23.0          1757  12.784291  6.690065   
+ROBBERY-COMMERCIAL                           4103  14.264441  5.721347  0.0  23.0          4103  14.363636  5.847640   
+ROBBERY-RESIDENTIAL                           988  12.481781  7.487827  0.0  23.0           988  12.352227  7.252811   
+ROBBERY-STREET                              11096  12.789384  7.907354  0.0  23.0         11096  12.825703  7.581154   
+SEX OFFENSE-OTHER                            5783  11.918381  7.235829  0.0  23.0          5783  13.357946  5.913171   
+THEFT-ALL OTHER                             49624  12.784036  6.417594  0.0  23.0         49624  13.755602  5.147722   
+THEFT-BICYCLE                               10206  13.797276  6.345727  0.0  23.0         10206  14.211346  4.919191   
+THEFT-BUILDING                              19718  13.032356  6.389003  0.0  23.0         19718  13.945278  5.096154   
+THEFT-SHOPLIFT                              44767  14.533049  4.384313  0.0  23.0         44767  14.787969  4.466527   
+TRESPASS                                    14733  12.337677  6.431457  0.0  23.0         14733  12.463178  6.388145   
+WEAPON                                       4560  12.828947  7.500597  0.0  23.0          4560  12.632675  7.512828   
+
+                                               Occurred Month                                Occurred Year  \
+                                     min   max          count      mean       std  min   max         count   
+Crime Subcategory                                                                                            
+AGGRAVATED ASSAULT                   0.0  23.0          13954  6.492834  3.298519  1.0  12.0         13954   
+AGGRAVATED ASSAULT-DV                0.0  23.0           6307  6.326463  3.400780  1.0  12.0          6307   
+ARSON                                0.0  23.0           1009  6.203171  3.196810  1.0  12.0          1009   
+BURGLARY-COMMERCIAL                  0.0  23.0          21274  6.494030  3.493638  1.0  12.0         21274   
+BURGLARY-COMMERCIAL-SECURE PARKING   0.0  23.0           1042  6.546065  3.318259  1.0  12.0          1042   
+BURGLARY-RESIDENTIAL                 0.0  23.0          43908  6.550196  3.464017  1.0  12.0         43908   
+BURGLARY-RESIDENTIAL-SECURE PARKING  0.0  23.0           7667  6.234642  3.495084  1.0  12.0          7667   
+CAR PROWL                            0.0  23.0         137766  6.434621  3.456114  1.0  12.0        137766   
+DISORDERLY CONDUCT                   0.0  23.0            245  5.857143  3.554033  1.0  12.0           245   
+DUI                                  0.0  23.0          11849  6.466537  3.562680  1.0  12.0         11849   
+FAMILY OFFENSE-NONVIOLENT            0.0  23.0           6372  6.229441  3.327623  1.0  12.0          6372   
+GAMBLE                               0.0  23.0             17  6.176471  3.539691  1.0  12.0            17   
+HOMICIDE                             0.0  23.0            250  6.356000  3.415836  1.0  12.0           250   
+LIQUOR LAW VIOLATION                 0.0  23.0           1588  6.253778  3.145969  1.0  12.0          1588   
+LOITERING                            0.0  22.0             82  6.439024  2.676360  1.0  12.0            82   
+MOTOR VEHICLE THEFT                  0.0  23.0          40362  6.457683  3.449854  1.0  12.0         40362   
+NARCOTIC                             0.0  23.0          16428  6.033662  3.407371  1.0  12.0         16428   
+PORNOGRAPHY                          0.0  23.0            154  5.655844  3.421157  1.0  12.0           154   
+PROSTITUTION                         0.0  23.0           3503  6.014559  3.062282  1.0  12.0          3503   
+RAPE                                 0.0  23.0           1757  6.332385  3.416586  1.0  12.0          1757   
+ROBBERY-COMMERCIAL                   0.0  23.0           4103  6.374117  3.553544  1.0  12.0          4103   
+ROBBERY-RESIDENTIAL                  0.0  23.0            988  6.348178  3.523007  1.0  12.0           988   
+ROBBERY-STREET                       0.0  23.0          11096  6.543439  3.380391  1.0  12.0         11096   
+SEX OFFENSE-OTHER                    0.0  23.0           5783  6.259900  3.389670  1.0  12.0          5783   
+THEFT-ALL OTHER                      0.0  23.0          49624  6.497159  3.412028  1.0  12.0         49624   
+THEFT-BICYCLE                        0.0  23.0          10206  6.795806  2.985026  1.0  12.0         10206   
+THEFT-BUILDING                       0.0  23.0          19718  6.428492  3.476558  1.0  12.0         19718   
+THEFT-SHOPLIFT                       0.0  23.0          44767  6.341323  3.437888  1.0  12.0         44767   
+TRESPASS                             0.0  23.0          14733  6.262404  3.440009  1.0  12.0         14733   
+WEAPON                               0.0  23.0           4560  6.262061  3.328074  1.0  12.0          4560   
+
+                                                                           Report Delay (Hours)               \
+                                            mean       std     min     max                count         mean   
+Crime Subcategory                                                                                              
+AGGRAVATED ASSAULT                   2013.271392  3.090355  2001.0  2018.0                13954    68.106063   
+AGGRAVATED ASSAULT-DV                2013.096718  2.965576  2004.0  2018.0                 6307   114.151261   
+ARSON                                2012.853320  3.262384  2007.0  2018.0                 1009    22.311199   
+BURGLARY-COMMERCIAL                  2012.958071  3.183143  2000.0  2018.0                21274   153.528250   
+BURGLARY-COMMERCIAL-SECURE PARKING   2014.165067  2.729849  2001.0  2018.0                 1042   159.892514   
+BURGLARY-RESIDENTIAL                 2012.572925  2.986206  1975.0  2018.0                43908   101.926756   
+BURGLARY-RESIDENTIAL-SECURE PARKING  2015.063649  2.128440  2001.0  2018.0                 7667   173.484283   
+CAR PROWL                            2012.878932  3.058419  1979.0  2018.0               137766    97.329733   
+DISORDERLY CONDUCT                   2012.408163  3.142245  2008.0  2018.0                  245    10.971429   
+DUI                                  2012.748840  3.180038  1908.0  2018.0                11849    86.652376   
+FAMILY OFFENSE-NONVIOLENT            2012.843691  3.292003  1964.0  2018.0                 6372  1417.468927   
+GAMBLE                               2011.235294  3.509441  2008.0  2018.0                   17     1.411765   
+HOMICIDE                             2012.388000  4.101799  1981.0  2018.0                  250   155.904000   
+LIQUOR LAW VIOLATION                 2011.088161  2.784607  2007.0  2018.0                 1588    11.848866   
+LOITERING                            2011.097561  3.441252  2008.0  2018.0                   82     2.634146   
+MOTOR VEHICLE THEFT                  2012.921287  2.969318  1988.0  2018.0                40362    74.407611   
+NARCOTIC                             2011.941502  3.128513  2006.0  2018.0                16428    24.113952   
+PORNOGRAPHY                          2012.701299  3.337507  2007.0  2018.0                  154   291.740260   
+PROSTITUTION                         2012.616043  2.989730  1996.0  2018.0                 3503   108.037682   
+RAPE                                 2013.096187  3.753870  1977.0  2018.0                 1757  3584.605578   
+ROBBERY-COMMERCIAL                   2013.526688  3.136611  2007.0  2018.0                 4103     4.229101   
+ROBBERY-RESIDENTIAL                  2012.605263  3.158760  2007.0  2018.0                  988    55.044534   
+ROBBERY-STREET                       2012.481975  2.996083  2000.0  2018.0                11096    52.258832   
+SEX OFFENSE-OTHER                    2012.639806  3.822070  1973.0  2018.0                 5783  3435.710185   
+THEFT-ALL OTHER                      2012.854204  3.036704  1993.0  2018.0                49624   298.743511   
+THEFT-BICYCLE                        2013.440427  2.740290  2006.0  2018.0                10206   151.642563   
+THEFT-BUILDING                       2012.883152  3.026223  1998.0  2018.0                19718   281.721878   
+THEFT-SHOPLIFT                       2012.986575  3.097584  2004.0  2018.0                44767    37.171667   
+TRESPASS                             2014.311138  3.104171  2001.0  2018.0                14733    20.779475   
+WEAPON                               2012.806140  3.189924  2007.0  2018.0                 4560    16.684211   
+
+                                                                  
+                                              std  min       max  
+Crime Subcategory                                                 
+AGGRAVATED ASSAULT                    1705.803046  0.0  115392.0  
+AGGRAVATED ASSAULT-DV                 1313.816446  0.0   49800.0  
+ARSON                                  185.355263  0.0    3624.0  
+BURGLARY-COMMERCIAL                   2101.177286  0.0  157800.0  
+BURGLARY-COMMERCIAL-SECURE PARKING    2728.631474  0.0   87720.0  
+BURGLARY-RESIDENTIAL                  1393.782764  0.0  140280.0  
+BURGLARY-RESIDENTIAL-SECURE PARKING   1618.185194  0.0   87696.0  
+CAR PROWL                             1388.766026  0.0  142200.0  
+DISORDERLY CONDUCT                     145.847169  0.0    2280.0  
+DUI                                   8063.492254  0.0  876600.0  
+FAMILY OFFENSE-NONVIOLENT            10982.370994  0.0  403224.0  
+GAMBLE                                   5.820855  0.0      24.0  
+HOMICIDE                              1923.387672  0.0   29424.0  
+LIQUOR LAW VIOLATION                   230.350386  0.0    8784.0  
+LOITERING                               11.317540  0.0      72.0  
+MOTOR VEHICLE THEFT                    800.052706  0.0   62256.0  
+NARCOTIC                               496.485692  0.0   35184.0  
+PORNOGRAPHY                           1053.001554  0.0    8712.0  
+PROSTITUTION                          2529.886773  0.0  129408.0  
+RAPE                                 19460.468176  0.0  362784.0  
+ROBBERY-COMMERCIAL                      87.976450  0.0    4800.0  
+ROBBERY-RESIDENTIAL                    736.821088  0.0   18168.0  
+ROBBERY-STREET                        1376.854485  0.0   78960.0  
+SEX OFFENSE-OTHER                    19170.715401  0.0  364752.0  
+THEFT-ALL OTHER                       2805.326544  0.0  190656.0  
+THEFT-BICYCLE                         1034.685750  0.0   56472.0  
+THEFT-BUILDING                        2457.545657  0.0  121560.0  
+THEFT-SHOPLIFT                         491.815351  0.0   61392.0  
+TRESPASS                               834.966378  0.0   87648.0  
+WEAPON                                 386.764391  0.0   18456.0  
+2026-06-18 14:47:13 | INFO | JT-NB | --------------- Improving the output ---------------
+2026-06-18 14:47:13 | DEBUG | JT-NB | 
+                                         count         mean          std     min       max
+Crime Subcategory                                                                         
+AGGRAVATED ASSAULT Occurred Hour         13954    12.526086     7.752898     0.0      23.0
+                   Reported Hour         13954    12.613874     7.524487     0.0      23.0
+                   Occurred Month        13954     6.492834     3.298519     1.0      12.0
+                   Occurred Year         13954  2013.271392     3.090355  2001.0    2018.0
+                   Report Delay (Hours)  13954    68.106063  1705.803046     0.0  115392.0
+...                                        ...          ...          ...     ...       ...
+WEAPON             Occurred Hour          4560    12.828947     7.500597     0.0      23.0
+                   Reported Hour          4560    12.632675     7.512828     0.0      23.0
+                   Occurred Month         4560     6.262061     3.328074     1.0      12.0
+                   Occurred Year          4560  2012.806140     3.189924  2007.0    2018.0
+                   Report Delay (Hours)   4560    16.684211   386.764391     0.0   18456.0
+
+[150 rows x 5 columns]
+2026-06-18 14:47:19 | INFO | JT-NB | Computing correlation matrix for numeric columns
+2026-06-18 14:47:19 | INFO | JT-NB | 
+Correlation matrix:
+2026-06-18 14:47:19 | DEBUG | JT-NB | 
+                      Occurred Hour  Reported Hour  Occurred Month  Occurred Year  Report Delay (Hours)
+Occurred Hour              1.000000       0.408097       -0.000509      -0.015815             -0.035179
+Reported Hour              0.408097       1.000000       -0.002967      -0.004722             -0.002070
+Occurred Month            -0.000509      -0.002967        1.000000      -0.079340             -0.020037
+Occurred Year             -0.015815      -0.004722       -0.079340       1.000000             -0.122377
+Report Delay (Hours)      -0.035179      -0.002070       -0.020037      -0.122377              1.000000
+2026-06-18 14:47:23 | INFO | JT-NB | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-18 14:47:31 | INFO | JT-NB | Creating scatter plot with legend positioned beside the chart
+2026-06-18 14:47:51 | INFO | JT-NB | Creating horizontal boxplot for all crime subcategories
+2026-06-18 14:47:51 | INFO | JT-NB | Total categories: 30
+2026-06-18 14:48:02 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:48:02 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:48:06 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:48:06 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:48:13 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:48:13 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:50:00 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:50:00 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:50:53 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:50:53 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:52:06 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:52:06 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:53:10 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:53:10 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:53:30 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-18 14:56:00 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:56:00 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:57:08 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 14:57:08 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 14:57:21 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-18 14:58:37 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-18 14:58:46 | INFO | JT-NB | Creating Executive Summary Dashboard
+2026-06-18 15:01:49 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 15:01:49 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 15:03:15 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 15:03:15 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 15:03:27 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-18 15:03:34 | INFO | JT-NB | Creating Executive Summary Dashboard
+2026-06-18 15:04:49 | INFO | JT-NB | Creating Executive Summary Dashboard
+2026-06-18 15:05:07 | INFO | JT-NB | ======================
+2026-06-18 15:05:07 | INFO | JT-NB | SUMMARY
+2026-06-18 15:05:07 | INFO | JT-NB | ======================
+2026-06-18 15:05:07 | INFO | JT-NB | Dataset: Crime_Data.csv
+2026-06-18 15:05:07 | INFO | JT-NB | Original rows: 481376
+2026-06-18 15:05:07 | INFO | JT-NB | Clean rows:    481112
+2026-06-18 15:05:07 | INFO | JT-NB | Crime Subcategories Found (30): ['AGGRAVATED ASSAULT', 'AGGRAVATED ASSAULT-DV', 'ARSON', 'BURGLARY-COMMERCIAL', 'BURGLARY-COMMERCIAL-SECURE PARKING', 'BURGLARY-RESIDENTIAL', 'BURGLARY-RESIDENTIAL-SECURE PARKING', 'CAR PROWL', 'DISORDERLY CONDUCT', 'DUI', 'FAMILY OFFENSE-NONVIOLENT', 'GAMBLE', 'HOMICIDE', 'LIQUOR LAW VIOLATION', 'LOITERING', 'MOTOR VEHICLE THEFT', 'NARCOTIC', 'PORNOGRAPHY', 'PROSTITUTION', 'RAPE', 'ROBBERY-COMMERCIAL', 'ROBBERY-RESIDENTIAL', 'ROBBERY-STREET', 'SEX OFFENSE-OTHER', 'THEFT-ALL OTHER', 'THEFT-BICYCLE', 'THEFT-BUILDING', 'THEFT-SHOPLIFT', 'TRESPASS', 'WEAPON']
+2026-06-18 15:05:07 | INFO | JT-NB | Top 5 Crime Subcategories:
+Crime Subcategory
+CAR PROWL               137766
+THEFT-ALL OTHER          49624
+THEFT-SHOPLIFT           44767
+BURGLARY-RESIDENTIAL     43908
+MOTOR VEHICLE THEFT      40362
+Name: count, dtype: int64
+2026-06-18 15:05:07 | INFO | JT-NB | Top 3 Hours of Crime Occurrence:
+Occurred Hour
+18.0    31005
+0.0     29432
+17.0    28925
+Name: count, dtype: int64
+2026-06-18 15:05:08 | INFO | JT-NB | Top 5 Neighborhoods with Most Crime:
+Neighborhood
+DOWNTOWN COMMERCIAL    45114
+NORTHGATE              28468
+CAPITOL HILL           28286
+QUEEN ANNE             25155
+SLU/CASCADE            21618
+Name: count, dtype: int64
+2026-06-18 15:05:08 | INFO | JT-NB | ======================
+2026-06-18 15:05:08 | INFO | JT-NB | Review the results:
+2026-06-18 15:05:08 | INFO | JT-NB | - Examine top crime categories
+2026-06-18 15:05:08 | INFO | JT-NB | - Identify peak crime hours
+2026-06-18 15:05:08 | INFO | JT-NB | - Compare neighborhoods with highest activity
+2026-06-18 15:05:08 | INFO | JT-NB | - Review correlations and scatterplots
+2026-06-18 15:05:08 | INFO | JT-NB | - Look for patterns in reporting delays
+2026-06-18 15:05:08 | INFO | JT-NB | ======================
+2026-06-18 15:05:08 | INFO | JT-NB | Next Steps:
+2026-06-18 15:05:08 | INFO | JT-NB | - Document insights in README.md
+2026-06-18 15:05:08 | INFO | JT-NB | - Write narrative in docs/index.md
+2026-06-18 15:05:08 | INFO | JT-NB | - Add charts and interpretations
+2026-06-18 15:05:08 | INFO | JT-NB | - Suggest modeling or deeper analysis directions
+2026-06-18 15:05:08 | INFO | JT-NB | ======================
+2026-06-18 15:05:08 | INFO | JT-NB | EDA workflow complete
+2026-06-18 15:05:08 | INFO | JT-NB | ==============================
+2026-06-18 15:05:08 | INFO | JT-NB | === Executed successfully! ===
+2026-06-18 15:05:08 | INFO | JT-NB | ==============================
+2026-06-18 15:05:16 | INFO | JT-NB | === RUN START ===
+2026-06-18 15:05:16 | INFO | JT-NB | project=JT-NB
+2026-06-18 15:05:16 | INFO | JT-NB | repo_dir=datafun-06-applied
+2026-06-18 15:05:16 | INFO | JT-NB | python=3.14.5
+2026-06-18 15:05:16 | INFO | JT-NB | os=Windows 11
+2026-06-18 15:05:16 | INFO | JT-NB | shell=powershell
+2026-06-18 15:05:16 | INFO | JT-NB | cwd=.
+2026-06-18 15:05:16 | INFO | JT-NB | github_actions=False
+2026-06-18 15:05:16 | INFO | JT-NB | Imports and configuration complete.
+2026-06-18 15:05:17 | INFO | JT-NB | Previewing first few rows of the dataset
+2026-06-18 15:05:17 | INFO | JT-NB | Column names
+2026-06-18 15:05:17 | INFO | JT-NB | Building starter data dictionary
+2026-06-18 15:05:17 | DEBUG | JT-NB | 
+                         column    dtype  missing_count  missing_pct
+0                 Report Number    int64              0         0.00
+1                 Occurred Date      str              2         0.00
+2                 Occurred Time  float64              2         0.00
+3                 Reported Date      str              0         0.00
+4                 Reported Time  float64              2         0.00
+5             Crime Subcategory      str            262         0.05
+6   Primary Offense Description      str              0         0.00
+7                      Precinct      str              6         0.00
+8                        Sector      str           3009         0.63
+9                          Beat      str           2962         0.62
+10                 Neighborhood      str              0         0.00
+2026-06-18 15:05:17 | INFO | JT-NB | Creating engineered time and date features...
+2026-06-18 15:07:36 | INFO | JT-NB | Feature engineering complete.
+2026-06-18 15:07:36 | INFO | JT-NB | Missing values per column:
+2026-06-18 15:07:36 | INFO | JT-NB | Report Number                     0
+Occurred Date                     2
+Occurred Time                     2
+Reported Date                     0
+Reported Time                     2
+Crime Subcategory               262
+Primary Offense Description       0
+Precinct                          6
+Sector                         3009
+Beat                           2962
+Neighborhood                      0
+Occurred Time Parsed              2
+Reported Time Parsed              2
+Occurred Hour                     2
+Reported Hour                     2
+Occurred Month                    2
+Occurred Year                     2
+Report Delay (Hours)              2
+dtype: int64
+2026-06-18 15:07:36 | INFO | JT-NB | Checking missing values per column (sorted)
+2026-06-18 15:07:36 | DEBUG | JT-NB | 
+Sector                         3009
+Beat                           2962
+Crime Subcategory               262
+Precinct                          6
+Occurred Year                     2
+Occurred Date                     2
+Occurred Time                     2
+Reported Time                     2
+Reported Time Parsed              2
+Occurred Time Parsed              2
+Report Delay (Hours)              2
+Occurred Month                    2
+Occurred Hour                     2
+Reported Hour                     2
+Report Number                     0
+Reported Date                     0
+Primary Offense Description       0
+Neighborhood                      0
+dtype: int64
+2026-06-18 15:07:37 | INFO | JT-NB | Duplicate rows detected: 0
+2026-06-18 15:07:37 | INFO | JT-NB | Describing numeric columns: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)']
+2026-06-18 15:07:37 | DEBUG | JT-NB | 
+       Occurred Hour  Reported Hour  Occurred Month  Occurred Year  Report Delay (Hours)
+count  481374.000000  481374.000000   481374.000000  481374.000000         481374.000000
+mean       13.432479      13.255423        6.424142    2012.919426            185.078912
+std         6.877183       5.907095        3.432134       3.089900           3400.707611
+min         0.000000       0.000000        1.000000    1908.000000              0.000000
+25%         9.000000       9.000000        3.000000    2010.000000              0.000000
+50%        15.000000      14.000000        6.000000    2013.000000              0.000000
+75%        19.000000      18.000000        9.000000    2016.000000             24.000000
+max        23.000000      23.000000       12.000000    2018.000000         876600.000000
+
+2026-06-18 15:07:37 | DEBUG | JT-NB | Columns required to be non-missing: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 15:07:37 | INFO | JT-NB | Columns found in df: ['Occurred Hour', 'Reported Hour', 'Occurred Month', 'Occurred Year', 'Report Delay (Hours)', 'Crime Subcategory']
+2026-06-18 15:07:37 | INFO | JT-NB | Original rows: 481376
+2026-06-18 15:07:37 | INFO | JT-NB | Clean rows:    481112
+2026-06-18 15:07:37 | INFO | JT-NB | Rows dropped:  264
+2026-06-18 15:07:37 | INFO | JT-NB | --------------- Manual statistics ---------------
+2026-06-18 15:07:37 | DEBUG | JT-NB | Occurred Hour Statistics (using numpy):
+2026-06-18 15:07:37 | DEBUG | JT-NB |   Mean: 13.43
+2026-06-18 15:07:37 | DEBUG | JT-NB |   Std Dev: 6.88
+2026-06-18 15:07:37 | DEBUG | JT-NB |   Min: 0.00
+2026-06-18 15:07:37 | DEBUG | JT-NB |   Max: 23.00
+2026-06-18 15:07:37 | DEBUG | JT-NB |   Range: 23.00
+2026-06-18 15:07:37 | INFO | JT-NB | Computing overall descriptive statistics
+2026-06-18 15:07:37 | DEBUG | JT-NB | 
+                         count         mean          std     min     25%     50%     75%       max
+Occurred Hour         481112.0    13.432829     6.876838     0.0     9.0    15.0    19.0      23.0
+Reported Hour         481112.0    13.255651     5.906971     0.0     9.0    14.0    18.0      23.0
+Occurred Month        481112.0     6.424313     3.432265     1.0     3.0     6.0     9.0      12.0
+Occurred Year         481112.0  2012.921869     3.088919  1908.0  2010.0  2013.0  2016.0    2018.0
+Report Delay (Hours)  481112.0   185.142786  3401.623826     0.0     0.0     0.0    24.0  876600.0
+2026-06-18 15:07:37 | INFO | JT-NB | --------------- Using pandas groupby() and agg() ---------------
+2026-06-18 15:07:37 | INFO | JT-NB | Computing descriptive statistics by group
+2026-06-18 15:07:37 | DEBUG | JT-NB | 
+                                    Occurred Hour                                 Reported Hour                       \
+                                            count       mean       std  min   max         count       mean       std   
+Crime Subcategory                                                                                                      
+AGGRAVATED ASSAULT                          13954  12.526086  7.752898  0.0  23.0         13954  12.613874  7.524487   
+AGGRAVATED ASSAULT-DV                        6307  12.861582  7.604105  0.0  23.0          6307  12.889646  7.322497   
+ARSON                                        1009  10.644202  8.165772  0.0  23.0          1009  10.478692  7.559932   
+BURGLARY-COMMERCIAL                         21274  11.878725  7.345658  0.0  23.0         21274  10.777616  5.271641   
+BURGLARY-COMMERCIAL-SECURE PARKING           1042  13.476008  6.969530  0.0  23.0          1042  12.385797  5.266656   
+BURGLARY-RESIDENTIAL                        43908  12.266147  6.117017  0.0  23.0         43908  14.253485  5.555938   
+BURGLARY-RESIDENTIAL-SECURE PARKING          7667  13.286161  7.326497  0.0  23.0          7667  13.050867  4.848664   
+CAR PROWL                                  137766  14.234891  7.116985  0.0  23.0        137766  13.167625  5.634110   
+DISORDERLY CONDUCT                            245  14.265306  7.215578  0.0  23.0           245  14.036735  7.395354   
+DUI                                         11849   9.681239  9.381241  0.0  23.0         11849   9.400962  9.138489   
+FAMILY OFFENSE-NONVIOLENT                    6372  13.042216  6.087491  0.0  23.0          6372  13.817326  5.510928   
+GAMBLE                                         17  15.470588  5.874922  0.0  22.0            17  15.764706  7.040325   
+HOMICIDE                                      250  11.064000  8.440431  0.0  23.0           250  10.964000  8.072631   
+LIQUOR LAW VIOLATION                         1588  14.246851  7.706462  0.0  23.0          1588  13.988665  7.843772   
+LOITERING                                      82  14.378049  5.435685  0.0  22.0            82  14.487805  5.256962   
+MOTOR VEHICLE THEFT                         40362  14.371414  7.128281  0.0  23.0         40362  12.130221  5.546083   
+NARCOTIC                                    16428  14.296202  6.564656  0.0  23.0         16428  14.119795  6.788755   
+PORNOGRAPHY                                   154  11.766234  6.198031  0.0  23.0           154  13.181818  5.051958   
+PROSTITUTION                                 3503  17.009420  6.897816  0.0  23.0          3503  15.851841  7.682932   
+RAPE                                         1757  10.564030  8.312177  0.0  23.0          1757  12.784291  6.690065   
+ROBBERY-COMMERCIAL                           4103  14.264441  5.721347  0.0  23.0          4103  14.363636  5.847640   
+ROBBERY-RESIDENTIAL                           988  12.481781  7.487827  0.0  23.0           988  12.352227  7.252811   
+ROBBERY-STREET                              11096  12.789384  7.907354  0.0  23.0         11096  12.825703  7.581154   
+SEX OFFENSE-OTHER                            5783  11.918381  7.235829  0.0  23.0          5783  13.357946  5.913171   
+THEFT-ALL OTHER                             49624  12.784036  6.417594  0.0  23.0         49624  13.755602  5.147722   
+THEFT-BICYCLE                               10206  13.797276  6.345727  0.0  23.0         10206  14.211346  4.919191   
+THEFT-BUILDING                              19718  13.032356  6.389003  0.0  23.0         19718  13.945278  5.096154   
+THEFT-SHOPLIFT                              44767  14.533049  4.384313  0.0  23.0         44767  14.787969  4.466527   
+TRESPASS                                    14733  12.337677  6.431457  0.0  23.0         14733  12.463178  6.388145   
+WEAPON                                       4560  12.828947  7.500597  0.0  23.0          4560  12.632675  7.512828   
+
+                                               Occurred Month                                Occurred Year  \
+                                     min   max          count      mean       std  min   max         count   
+Crime Subcategory                                                                                            
+AGGRAVATED ASSAULT                   0.0  23.0          13954  6.492834  3.298519  1.0  12.0         13954   
+AGGRAVATED ASSAULT-DV                0.0  23.0           6307  6.326463  3.400780  1.0  12.0          6307   
+ARSON                                0.0  23.0           1009  6.203171  3.196810  1.0  12.0          1009   
+BURGLARY-COMMERCIAL                  0.0  23.0          21274  6.494030  3.493638  1.0  12.0         21274   
+BURGLARY-COMMERCIAL-SECURE PARKING   0.0  23.0           1042  6.546065  3.318259  1.0  12.0          1042   
+BURGLARY-RESIDENTIAL                 0.0  23.0          43908  6.550196  3.464017  1.0  12.0         43908   
+BURGLARY-RESIDENTIAL-SECURE PARKING  0.0  23.0           7667  6.234642  3.495084  1.0  12.0          7667   
+CAR PROWL                            0.0  23.0         137766  6.434621  3.456114  1.0  12.0        137766   
+DISORDERLY CONDUCT                   0.0  23.0            245  5.857143  3.554033  1.0  12.0           245   
+DUI                                  0.0  23.0          11849  6.466537  3.562680  1.0  12.0         11849   
+FAMILY OFFENSE-NONVIOLENT            0.0  23.0           6372  6.229441  3.327623  1.0  12.0          6372   
+GAMBLE                               0.0  23.0             17  6.176471  3.539691  1.0  12.0            17   
+HOMICIDE                             0.0  23.0            250  6.356000  3.415836  1.0  12.0           250   
+LIQUOR LAW VIOLATION                 0.0  23.0           1588  6.253778  3.145969  1.0  12.0          1588   
+LOITERING                            0.0  22.0             82  6.439024  2.676360  1.0  12.0            82   
+MOTOR VEHICLE THEFT                  0.0  23.0          40362  6.457683  3.449854  1.0  12.0         40362   
+NARCOTIC                             0.0  23.0          16428  6.033662  3.407371  1.0  12.0         16428   
+PORNOGRAPHY                          0.0  23.0            154  5.655844  3.421157  1.0  12.0           154   
+PROSTITUTION                         0.0  23.0           3503  6.014559  3.062282  1.0  12.0          3503   
+RAPE                                 0.0  23.0           1757  6.332385  3.416586  1.0  12.0          1757   
+ROBBERY-COMMERCIAL                   0.0  23.0           4103  6.374117  3.553544  1.0  12.0          4103   
+ROBBERY-RESIDENTIAL                  0.0  23.0            988  6.348178  3.523007  1.0  12.0           988   
+ROBBERY-STREET                       0.0  23.0          11096  6.543439  3.380391  1.0  12.0         11096   
+SEX OFFENSE-OTHER                    0.0  23.0           5783  6.259900  3.389670  1.0  12.0          5783   
+THEFT-ALL OTHER                      0.0  23.0          49624  6.497159  3.412028  1.0  12.0         49624   
+THEFT-BICYCLE                        0.0  23.0          10206  6.795806  2.985026  1.0  12.0         10206   
+THEFT-BUILDING                       0.0  23.0          19718  6.428492  3.476558  1.0  12.0         19718   
+THEFT-SHOPLIFT                       0.0  23.0          44767  6.341323  3.437888  1.0  12.0         44767   
+TRESPASS                             0.0  23.0          14733  6.262404  3.440009  1.0  12.0         14733   
+WEAPON                               0.0  23.0           4560  6.262061  3.328074  1.0  12.0          4560   
+
+                                                                           Report Delay (Hours)               \
+                                            mean       std     min     max                count         mean   
+Crime Subcategory                                                                                              
+AGGRAVATED ASSAULT                   2013.271392  3.090355  2001.0  2018.0                13954    68.106063   
+AGGRAVATED ASSAULT-DV                2013.096718  2.965576  2004.0  2018.0                 6307   114.151261   
+ARSON                                2012.853320  3.262384  2007.0  2018.0                 1009    22.311199   
+BURGLARY-COMMERCIAL                  2012.958071  3.183143  2000.0  2018.0                21274   153.528250   
+BURGLARY-COMMERCIAL-SECURE PARKING   2014.165067  2.729849  2001.0  2018.0                 1042   159.892514   
+BURGLARY-RESIDENTIAL                 2012.572925  2.986206  1975.0  2018.0                43908   101.926756   
+BURGLARY-RESIDENTIAL-SECURE PARKING  2015.063649  2.128440  2001.0  2018.0                 7667   173.484283   
+CAR PROWL                            2012.878932  3.058419  1979.0  2018.0               137766    97.329733   
+DISORDERLY CONDUCT                   2012.408163  3.142245  2008.0  2018.0                  245    10.971429   
+DUI                                  2012.748840  3.180038  1908.0  2018.0                11849    86.652376   
+FAMILY OFFENSE-NONVIOLENT            2012.843691  3.292003  1964.0  2018.0                 6372  1417.468927   
+GAMBLE                               2011.235294  3.509441  2008.0  2018.0                   17     1.411765   
+HOMICIDE                             2012.388000  4.101799  1981.0  2018.0                  250   155.904000   
+LIQUOR LAW VIOLATION                 2011.088161  2.784607  2007.0  2018.0                 1588    11.848866   
+LOITERING                            2011.097561  3.441252  2008.0  2018.0                   82     2.634146   
+MOTOR VEHICLE THEFT                  2012.921287  2.969318  1988.0  2018.0                40362    74.407611   
+NARCOTIC                             2011.941502  3.128513  2006.0  2018.0                16428    24.113952   
+PORNOGRAPHY                          2012.701299  3.337507  2007.0  2018.0                  154   291.740260   
+PROSTITUTION                         2012.616043  2.989730  1996.0  2018.0                 3503   108.037682   
+RAPE                                 2013.096187  3.753870  1977.0  2018.0                 1757  3584.605578   
+ROBBERY-COMMERCIAL                   2013.526688  3.136611  2007.0  2018.0                 4103     4.229101   
+ROBBERY-RESIDENTIAL                  2012.605263  3.158760  2007.0  2018.0                  988    55.044534   
+ROBBERY-STREET                       2012.481975  2.996083  2000.0  2018.0                11096    52.258832   
+SEX OFFENSE-OTHER                    2012.639806  3.822070  1973.0  2018.0                 5783  3435.710185   
+THEFT-ALL OTHER                      2012.854204  3.036704  1993.0  2018.0                49624   298.743511   
+THEFT-BICYCLE                        2013.440427  2.740290  2006.0  2018.0                10206   151.642563   
+THEFT-BUILDING                       2012.883152  3.026223  1998.0  2018.0                19718   281.721878   
+THEFT-SHOPLIFT                       2012.986575  3.097584  2004.0  2018.0                44767    37.171667   
+TRESPASS                             2014.311138  3.104171  2001.0  2018.0                14733    20.779475   
+WEAPON                               2012.806140  3.189924  2007.0  2018.0                 4560    16.684211   
+
+                                                                  
+                                              std  min       max  
+Crime Subcategory                                                 
+AGGRAVATED ASSAULT                    1705.803046  0.0  115392.0  
+AGGRAVATED ASSAULT-DV                 1313.816446  0.0   49800.0  
+ARSON                                  185.355263  0.0    3624.0  
+BURGLARY-COMMERCIAL                   2101.177286  0.0  157800.0  
+BURGLARY-COMMERCIAL-SECURE PARKING    2728.631474  0.0   87720.0  
+BURGLARY-RESIDENTIAL                  1393.782764  0.0  140280.0  
+BURGLARY-RESIDENTIAL-SECURE PARKING   1618.185194  0.0   87696.0  
+CAR PROWL                             1388.766026  0.0  142200.0  
+DISORDERLY CONDUCT                     145.847169  0.0    2280.0  
+DUI                                   8063.492254  0.0  876600.0  
+FAMILY OFFENSE-NONVIOLENT            10982.370994  0.0  403224.0  
+GAMBLE                                   5.820855  0.0      24.0  
+HOMICIDE                              1923.387672  0.0   29424.0  
+LIQUOR LAW VIOLATION                   230.350386  0.0    8784.0  
+LOITERING                               11.317540  0.0      72.0  
+MOTOR VEHICLE THEFT                    800.052706  0.0   62256.0  
+NARCOTIC                               496.485692  0.0   35184.0  
+PORNOGRAPHY                           1053.001554  0.0    8712.0  
+PROSTITUTION                          2529.886773  0.0  129408.0  
+RAPE                                 19460.468176  0.0  362784.0  
+ROBBERY-COMMERCIAL                      87.976450  0.0    4800.0  
+ROBBERY-RESIDENTIAL                    736.821088  0.0   18168.0  
+ROBBERY-STREET                        1376.854485  0.0   78960.0  
+SEX OFFENSE-OTHER                    19170.715401  0.0  364752.0  
+THEFT-ALL OTHER                       2805.326544  0.0  190656.0  
+THEFT-BICYCLE                         1034.685750  0.0   56472.0  
+THEFT-BUILDING                        2457.545657  0.0  121560.0  
+THEFT-SHOPLIFT                         491.815351  0.0   61392.0  
+TRESPASS                               834.966378  0.0   87648.0  
+WEAPON                                 386.764391  0.0   18456.0  
+2026-06-18 15:07:37 | INFO | JT-NB | --------------- Improving the output ---------------
+2026-06-18 15:07:38 | DEBUG | JT-NB | 
+                                         count         mean          std     min       max
+Crime Subcategory                                                                         
+AGGRAVATED ASSAULT Occurred Hour         13954    12.526086     7.752898     0.0      23.0
+                   Reported Hour         13954    12.613874     7.524487     0.0      23.0
+                   Occurred Month        13954     6.492834     3.298519     1.0      12.0
+                   Occurred Year         13954  2013.271392     3.090355  2001.0    2018.0
+                   Report Delay (Hours)  13954    68.106063  1705.803046     0.0  115392.0
+...                                        ...          ...          ...     ...       ...
+WEAPON             Occurred Hour          4560    12.828947     7.500597     0.0      23.0
+                   Reported Hour          4560    12.632675     7.512828     0.0      23.0
+                   Occurred Month         4560     6.262061     3.328074     1.0      12.0
+                   Occurred Year          4560  2012.806140     3.189924  2007.0    2018.0
+                   Report Delay (Hours)   4560    16.684211   386.764391     0.0   18456.0
+
+[150 rows x 5 columns]
+2026-06-18 15:07:38 | INFO | JT-NB | Computing correlation matrix for numeric columns
+2026-06-18 15:07:38 | INFO | JT-NB | 
+Correlation matrix:
+2026-06-18 15:07:38 | DEBUG | JT-NB | 
+                      Occurred Hour  Reported Hour  Occurred Month  Occurred Year  Report Delay (Hours)
+Occurred Hour              1.000000       0.408097       -0.000509      -0.015815             -0.035179
+Reported Hour              0.408097       1.000000       -0.002967      -0.004722             -0.002070
+Occurred Month            -0.000509      -0.002967        1.000000      -0.079340             -0.020037
+Occurred Year             -0.015815      -0.004722       -0.079340       1.000000             -0.122377
+Report Delay (Hours)      -0.035179      -0.002070       -0.020037      -0.122377              1.000000
+2026-06-18 15:07:38 | INFO | JT-NB | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-18 15:07:38 | INFO | JT-NB | Creating scatter plot with legend positioned beside the chart
+2026-06-18 15:07:49 | INFO | JT-NB | Creating horizontal boxplot for all crime subcategories
+2026-06-18 15:07:49 | INFO | JT-NB | Total categories: 30
+2026-06-18 15:07:51 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-18 15:07:51 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-18 15:07:51 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-18 15:07:51 | INFO | JT-NB | Creating Executive Summary Dashboard
+2026-06-18 15:07:52 | INFO | JT-NB | ======================
+2026-06-18 15:07:52 | INFO | JT-NB | SUMMARY
+2026-06-18 15:07:52 | INFO | JT-NB | ======================
+2026-06-18 15:07:52 | INFO | JT-NB | Dataset: Crime_Data.csv
+2026-06-18 15:07:52 | INFO | JT-NB | Original rows: 481376
+2026-06-18 15:07:52 | INFO | JT-NB | Clean rows:    481112
+2026-06-18 15:07:52 | INFO | JT-NB | Crime Subcategories Found (30): ['AGGRAVATED ASSAULT', 'AGGRAVATED ASSAULT-DV', 'ARSON', 'BURGLARY-COMMERCIAL', 'BURGLARY-COMMERCIAL-SECURE PARKING', 'BURGLARY-RESIDENTIAL', 'BURGLARY-RESIDENTIAL-SECURE PARKING', 'CAR PROWL', 'DISORDERLY CONDUCT', 'DUI', 'FAMILY OFFENSE-NONVIOLENT', 'GAMBLE', 'HOMICIDE', 'LIQUOR LAW VIOLATION', 'LOITERING', 'MOTOR VEHICLE THEFT', 'NARCOTIC', 'PORNOGRAPHY', 'PROSTITUTION', 'RAPE', 'ROBBERY-COMMERCIAL', 'ROBBERY-RESIDENTIAL', 'ROBBERY-STREET', 'SEX OFFENSE-OTHER', 'THEFT-ALL OTHER', 'THEFT-BICYCLE', 'THEFT-BUILDING', 'THEFT-SHOPLIFT', 'TRESPASS', 'WEAPON']
+2026-06-18 15:07:52 | INFO | JT-NB | Top 5 Crime Subcategories:
+Crime Subcategory
+CAR PROWL               137766
+THEFT-ALL OTHER          49624
+THEFT-SHOPLIFT           44767
+BURGLARY-RESIDENTIAL     43908
+MOTOR VEHICLE THEFT      40362
+Name: count, dtype: int64
+2026-06-18 15:07:52 | INFO | JT-NB | Top 3 Hours of Crime Occurrence:
+Occurred Hour
+18.0    31005
+0.0     29432
+17.0    28925
+Name: count, dtype: int64
+2026-06-18 15:07:53 | INFO | JT-NB | Top 5 Neighborhoods with Most Crime:
+Neighborhood
+DOWNTOWN COMMERCIAL    45114
+NORTHGATE              28468
+CAPITOL HILL           28286
+QUEEN ANNE             25155
+SLU/CASCADE            21618
+Name: count, dtype: int64
+2026-06-18 15:07:53 | INFO | JT-NB | ======================
+2026-06-18 15:07:53 | INFO | JT-NB | Review the results:
+2026-06-18 15:07:53 | INFO | JT-NB | - Examine top crime categories
+2026-06-18 15:07:53 | INFO | JT-NB | - Identify peak crime hours
+2026-06-18 15:07:53 | INFO | JT-NB | - Compare neighborhoods with highest activity
+2026-06-18 15:07:53 | INFO | JT-NB | - Review correlations and scatterplots
+2026-06-18 15:07:53 | INFO | JT-NB | - Look for patterns in reporting delays
+2026-06-18 15:07:53 | INFO | JT-NB | ======================
+2026-06-18 15:07:53 | INFO | JT-NB | Next Steps:
+2026-06-18 15:07:53 | INFO | JT-NB | - Document insights in README.md
+2026-06-18 15:07:53 | INFO | JT-NB | - Write narrative in docs/index.md
+2026-06-18 15:07:53 | INFO | JT-NB | - Add charts and interpretations
+2026-06-18 15:07:53 | INFO | JT-NB | - Suggest modeling or deeper analysis directions
+2026-06-18 15:07:53 | INFO | JT-NB | ======================
+2026-06-18 15:07:53 | INFO | JT-NB | EDA workflow complete
+2026-06-18 15:07:53 | INFO | JT-NB | ==============================
+2026-06-18 15:07:53 | INFO | JT-NB | === Executed successfully! ===
+2026-06-18 15:07:53 | INFO | JT-NB | ==============================
