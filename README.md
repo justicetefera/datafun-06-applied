@@ -1,4 +1,4 @@
-# 📊 Applied Analytics — Seattle Crime Data EDA
+# 🕵️‍♂️ Applied Analytics — Seattle, WA Crime Dataset EDA
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://justicetefera.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
@@ -6,15 +6,16 @@
 
 > Professional Python project: applied data analytics.
 
-### Repository: `datafun-06-applied`
+### Repository: datafun-06-applied
+### url https://github.com/justicetefera/datafun-06-applied
 
-This project demonstrates a complete, repeatable Exploratory Data Analysis (EDA) workflow applied to a large real‑world dataset: Seattle Police Department crime reports spanning roughly ten years.
+This project demonstrates a complete, repeatable Exploratory Data Analysis (EDA) workflow applied to a large real‑world dataset: Seattle, WA Police Department crime reports spanning roughly ten years.
 
 The notebook in this repository follows a structured, instructor‑aligned workflow including data loading, cleaning, feature engineering, descriptive statistics, and visual exploration.
 For data suggestions, please see [data/raw/README.md](data/raw/README.md).
 
 ## 📦 Dataset Description
-The dataset contains ~481,000 police‑reported crime incidents from the City of Seattle.
+🚔 The dataset contains ~481,000 police‑reported crime incidents from the City of Seattle.
 Source: Kaggle — Crime Dataset Analysis by theyazilimci
 
 ## Examples
