@@ -220,15 +220,7 @@ Numeric features show weak correlations overall. Occurred Hour and Reported Hour
 
 Together, these panels provide a concise, executive‑level snapshot of Seattle’s crime landscape.
 
-
-
-
-- your figures and narrative should reflect your work,
-- this `README.md` should include your commands, process, and visuals, and
-- `docs/index.md` should include your narrative.
-
 ## Project Documentation
-
 Additional instructions, terms, and project notes:
 
 [docs/index.md](docs/index.md)
