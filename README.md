@@ -1,4 +1,4 @@
-# EDA-applied
+# 📊 Applied Analytics — Seattle Crime Data EDA
 
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://justicetefera.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
@@ -6,17 +6,16 @@
 
 > Professional Python project: applied data analytics.
 
-## Project Goal
+### Repository: `datafun-06-applied`
 
-In this project, you perform a novel **Exploratory Data Analysis (EDA)**
-using Jupyter notebooks or Python modules (your preference).
-The addition of related data and/or SQL may be included and is optional.
+This project demonstrates a complete, repeatable Exploratory Data Analysis (EDA) workflow applied to a large real‑world dataset: Seattle Police Department crime reports spanning roughly ten years.
 
-Your goal: choose a new dataset, and explore it:
-run checks, view distributions, identify missing values or outliers.
-Create and present a custom project to explore a different tabular dataset.
-
+The notebook in this repository follows a structured, instructor‑aligned workflow including data loading, cleaning, feature engineering, descriptive statistics, and visual exploration.
 For data suggestions, please see [data/raw/README.md](data/raw/README.md).
+
+## 📦 Dataset Description
+The dataset contains ~481,000 police‑reported crime incidents from the City of Seattle.
+Source: Kaggle — Crime Dataset Analysis by theyazilimci
 
 ## Examples
 
@@ -39,19 +38,6 @@ You'll work with these areas:
 - **zensical.toml** - update authorship & links
 
 
-## Instructions
-
-1. Phase 1. **Start & Run**
-2. Phase 2. **Change Authorship**
-3. Phase 3. **Read & Understand**
-4. Phase 4. **Modify**
-5. Phase 5. **Apply**
-
-
-## Challenges
-
-
-
 ## Success
 
 
@@ -63,7 +49,7 @@ Executed successfully!
 
 A new file `project.log` will appear in the root project folder.
 
-## Command Reference
+## 🚀 How to Run the Notebook
 
 <details>
 <summary>Show command reference</summary>
@@ -73,6 +59,8 @@ A new file `project.log` will appear in the root project folder.
 After you get a copy of this repo in your own GitHub account,
 open a machine terminal in your `Repos` folder:
 
+### Clone the repo
+
 ```shell
 # Replace username with YOUR GitHub username.
 git clone https://github.com/justicetefera/datafun-06-applied
@@ -81,11 +69,7 @@ cd datafun-06-applied
 code .
 ```
 
-### In a VS Code terminal
-
-These are listed for convenience.
-For best results, follow the detailed instructions in
-[datafun-06-applied](https://github.com/justicetefera/datafun-06-applied/).
+### Create a virtual environment
 
 ```shell
 uv self update
@@ -114,80 +98,133 @@ git commit -m "update"
 git push -u origin main
 ```
 
+```shell
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+```
+### Install dependencies
+``` shell
+pip install -r requirements.txt
+
+pip install pandas numpy matplotlib seaborn ## Manually
+
+```
+### Ensure dataset is in place
+
+`data/raw/Crime_Data.csv`
+
+### Launch Jupyter
+``` shell
+jupyter notebook
+
+notebooks/crime_eda.ipynb
+
+```
+
+
 </details>
 
-## Notes
 
-- Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
-- Use `CTRL+f` to find (and replace) text within a file.
-- You do not need to add to or modify `tests/`. They are provided for example only.
-- Many files are silent helpers. Explore as you like, but nothing is required.
-- You do NOT not to understand everything; understanding builds naturally over time.
-
-## Troubleshooting >>>
-
-If you see something like this in your terminal: `>>>` or `...`
-You accidentally started Python interactive mode.
-It happens.
-Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
-
-## Example Output (Can Remove this Section after You Verify)
+## Output
 
 ```shell
- | INFO | P06 | --- Section 9: Summary and next steps ---
- | INFO | P06 | ========================
- | INFO | P06 | SUMMARY
- | INFO | P06 | ========================
- | INFO | P06 | Dataset: owid-co2-data-subset
- | INFO | P06 | Original rows: 350
- | INFO | P06 | Clean rows:    308
- | INFO | P06 | Groups found in country: ['Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Japan', 'United Kingdom', 'United States', 'World']
- | INFO | P06 | ======================
- | INFO | P06 | Review the results.
- | INFO | P06 | Determine the strongest correlations.
- | INFO | P06 | ======================
- | INFO | P06 | Look for interesting patterns in the charts.
- | INFO | P06 | Repeat the process, exploring additional angles.
- | INFO | P06 | After finding interesting insights, conclude your analysis.
- | INFO | P06 | ======================
- | INFO | P06 | Include instructions and specifics in your README.md file.
- | INFO | P06 | Write up your narrative on your docs/index.md file.
- | INFO | P06 | Include your next step suggestions for further analysis or modeling.
- | INFO | P06 | ======================
- | INFO | P06 | ----- in a script, call plt.show() once at the end to display all charts -----
- | INFO | P06 | ----- in a script, close the chart windows (with the close button) to continue  -----
- | INFO | P06 | EDA workflow complete
- | INFO | P06 | IMPORTANT: This script creates chart windows.
- | INFO | P06 | Close any chart windows and terminate this process with CTRL+c as needed.
- | INFO | P06 | ========================
- | INFO | P06 | Executed successfully!
- | INFO | P06 | ========================
+ 2026-06-19 09:59:46 | INFO | JT-NB | ---------Visualize Correlation Matrix as a Heatmap---------------
+2026-06-19 09:59:47 | INFO | JT-NB | Creating scatter plot with legend positioned beside the chart
+2026-06-19 10:00:09 | INFO | JT-NB | Creating horizontal boxplot for all crime subcategories
+2026-06-19 10:00:09 | INFO | JT-NB | Total categories: 30
+2026-06-19 10:00:12 | INFO | JT-NB | Creating vertical bar chart for top 3 occurred hours
+2026-06-19 10:00:12 | INFO | JT-NB | Top 3 hours: [18.0, 0.0, 17.0]
+2026-06-19 10:00:12 | INFO | JT-NB | Creating side-by-side pie charts for safest and most crime neighborhoods
+2026-06-19 10:00:13 | INFO | JT-NB | Creating Executive Summary Dashboard
+2026-06-19 10:00:15 | INFO | JT-NB | ======================
+2026-06-19 10:00:15 | INFO | JT-NB | SUMMARY
+2026-06-19 10:00:15 | INFO | JT-NB | ======================
+2026-06-19 10:00:15 | INFO | JT-NB | Dataset: Crime_Data.csv
+2026-06-19 10:00:15 | INFO | JT-NB | Original rows: 481376
+2026-06-19 10:00:15 | INFO | JT-NB | Clean rows:    481112
+2026-06-19 10:00:15 | INFO | JT-NB | Crime Subcategories Found (30): ['AGGRAVATED ASSAULT', 'AGGRAVATED ASSAULT-DV', 'ARSON', 'BURGLARY-COMMERCIAL', 'BURGLARY-COMMERCIAL-SECURE PARKING', 'BURGLARY-RESIDENTIAL', 'BURGLARY-RESIDENTIAL-SECURE PARKING', 'CAR PROWL', 'DISORDERLY CONDUCT', 'DUI', 'FAMILY OFFENSE-NONVIOLENT', 'GAMBLE', 'HOMICIDE', 'LIQUOR LAW VIOLATION', 'LOITERING', 'MOTOR VEHICLE THEFT', 'NARCOTIC', 'PORNOGRAPHY', 'PROSTITUTION', 'RAPE', 'ROBBERY-COMMERCIAL', 'ROBBERY-RESIDENTIAL', 'ROBBERY-STREET', 'SEX OFFENSE-OTHER', 'THEFT-ALL OTHER', 'THEFT-BICYCLE', 'THEFT-BUILDING', 'THEFT-SHOPLIFT', 'TRESPASS', 'WEAPON']
+2026-06-19 10:00:15 | INFO | JT-NB | Top 5 Crime Subcategories:
+Crime Subcategory
+CAR PROWL               137766
+THEFT-ALL OTHER          49624
+THEFT-SHOPLIFT           44767
+BURGLARY-RESIDENTIAL     43908
+MOTOR VEHICLE THEFT      40362
+Name: count, dtype: int64
+2026-06-19 10:00:15 | INFO | JT-NB | Top 3 Hours of Crime Occurrence:
+Occurred Hour
+18.0    31005
+0.0     29432
+17.0    28925
+Name: count, dtype: int64
+2026-06-19 10:00:16 | INFO | JT-NB | Top 5 Neighborhoods with Most Crime:
+Neighborhood
+DOWNTOWN COMMERCIAL    45114
+NORTHGATE              28468
+CAPITOL HILL           28286
+QUEEN ANNE             25155
+SLU/CASCADE            21618
+Name: count, dtype: int64
+2026-06-19 10:00:16 | INFO | JT-NB | ======================
+2026-06-19 10:00:16 | INFO | JT-NB | Review the results:
+2026-06-19 10:00:16 | INFO | JT-NB | - Examine top crime categories
+2026-06-19 10:00:16 | INFO | JT-NB | - Identify peak crime hours
+2026-06-19 10:00:16 | INFO | JT-NB | - Compare neighborhoods with highest activity
+2026-06-19 10:00:16 | INFO | JT-NB | - Review correlations and scatterplots
+2026-06-19 10:00:16 | INFO | JT-NB | - Look for patterns in reporting delays
+2026-06-19 10:00:16 | INFO | JT-NB | ======================
+2026-06-19 10:00:16 | INFO | JT-NB | Next Steps:
+2026-06-19 10:00:16 | INFO | JT-NB | - Document insights in README.md
+2026-06-19 10:00:16 | INFO | JT-NB | - Write narrative in docs/index.md
+2026-06-19 10:00:16 | INFO | JT-NB | - Add charts and interpretations
+2026-06-19 10:00:16 | INFO | JT-NB | - Suggest modeling or deeper analysis directions
+2026-06-19 10:00:16 | INFO | JT-NB | ======================
+2026-06-19 10:00:16 | INFO | JT-NB | EDA workflow complete
+2026-06-19 10:00:16 | INFO | JT-NB | ==============================
+2026-06-19 10:00:16 | INFO | JT-NB | === Executed successfully! ===
+2026-06-19 10:00:16 | INFO | JT-NB | ==============================
 ```
 
 ## Findings and Visuals
+## 📊 Side‑by‑Side Pie Charts — Safest vs. Most Crime Neighborhoods
 
-Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure by using:
-an exclamation mark immediately followed by square brackets containing a useful caption
-immediately followed by parentheses containing the relative path to your figure.
-Note: When you start typing the path with a dot (.) for "here, in this directory",
-the IDE may help complete the path.
+![Safest vs Most Crime Neighborhoods](figures/safest_vs_most_crime_pies.png)
 
-In your custom project, follow this example, but
+These pie charts compare Seattle neighborhoods with the lowest and highest crime counts.
+
+On the left, the Top 5 Safest Neighborhoods show that Genesee accounts for nearly half of all low‑crime incidents (48.6%), followed by Eastlake East (24.8%) and Pigeon Point (17.1%). Smaller segments like Commercial Harbor Island and Commercial Duwamish represent minimal crime activity, indicating relatively secure areas.
+
+On the right, the Top 5 Most Crime Neighborhoods reveal that Downtown Commercial leads with 33.4% of incidents, followed by Northgate (19.2%), Capitol Hill (18.9%), Queen Anne (13.9%), and South Cascade (14.6%). These areas show concentrated crime activity, likely influenced by higher population density, nightlife, and commercial zones.
+
+Together, these charts highlight Seattle’s contrasting neighborhood profiles—some consistently safe and others persistently high in crime—offering valuable insight for targeted community safety initiatives and resource allocation.
+
+
+## 📊 Executive Summary Dashboard
+
+![Executive Summary Dashboard](figures/executive_summary_dashboard.png)
+
+This 4‑panel dashboard provides a high‑level overview of Seattle crime patterns:
+
+**Top 5 Crime Subcategories**
+A small number of crime types dominate the dataset, with Car Prowl, Theft categories, and Residential Burglary appearing most frequently.
+
+**Top 5 Neighborhoods with Most Crime**
+Downtown Commercial leads all neighborhoods in crime volume, followed by Northgate, Capitol Hill, Queen Anne, and South Cascade—areas associated with dense population, nightlife, and commercial activity.
+
+**Top 3 Hours of Crime Occurrence**
+Crime peaks at predictable times: midnight, late afternoon, and early evening. These patterns align with nightlife activity and commuter flow.
+
+**Correlation Heatmap**
+Numeric features show weak correlations overall. Occurred Hour and Reported Hour have a modest positive relationship, while reporting delays show little connection to time‑based features.
+
+Together, these panels provide a concise, executive‑level snapshot of Seattle’s crime landscape.
+
+
+
 
 - your figures and narrative should reflect your work,
 - this `README.md` should include your commands, process, and visuals, and
 - `docs/index.md` should include your narrative.
-
-Remove unnecessary instructional comments in your custom files.
-
-Update these figures to present interesting results from your custom project:
-
-![Correlation Heatmap](./docs/images/Figure_1.png)
-
-![Provide a Useful Caption](./docs/images/Figure_2.png)
-
-![Provide a Useful Caption](./docs/images/Figure_3.png)
 
 ## Project Documentation
 

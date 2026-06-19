@@ -187,6 +187,8 @@ __pycache__/
 # ALT: Comment if logs must be inspected or validated.
 # *.log
 logs/
+*.log
+
 
 # Ignore large raw datasets
 data/raw/Crime_Data.csv
