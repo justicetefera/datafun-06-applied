@@ -1,13 +1,37 @@
-# Project Documentation
+# 🕵️‍♂️ Crime Data Analysis – Project Documentation
 
-This site provides project documentation.
-Use the documentation navigation to explore.
+Welcome to the documentation site for my applied analytics project.
+This site explains the purpose, workflow, methods, and results of my analysis of Seattle crime data, completed as part of my datafun‑06‑applied coursework.
+
+Use the navigation panel to explore the project’s components, code, and results.
+
+---
+
+## 📝 Project Overview
+
+This project performs an end‑to‑end exploratory data analysis (EDA) on Seattle crime data.
+It includes:
+
+- Data ingestion and cleaning
+- Feature engineering
+- Visual analytics
+- Summary dashboards
+- Insights about crime patterns, hotspots, and trends
+
+All figures, notebooks, and logs were generated during the development process.
+
+---
 
 ## How-To Guide
 
-Many instructions are common to all our projects.
+If you want to run this project locally:
 
-See
+1. Clone the repository
+2. Create and activate a virtual environment
+3. Install dependencies using `uv`
+4. Run the notebook or scripts inside the `notebooks/` directory
+
+For reference, see the example workflow:
 [⭐ **Workflow: Apply Example**](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 to get these projects running on your machine.
 
